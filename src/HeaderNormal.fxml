@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane stylesheets="@Header.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HeaderNormalController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane id="header" prefHeight="58.0" prefWidth="886.0">
+         <children>
+            <HBox layoutX="386.0" layoutY="4.0" prefHeight="50.0" prefWidth="500.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="80.0" text="用户名:">
+                     <font>
+                        <Font name="Microsoft YaHei" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="username" prefHeight="40.0" prefWidth="130.0" text="一二三四五六" textFill="#25c910">
+                     <font>
+                        <Font name="Microsoft YaHei" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="90.0" text="用户类别:">
+                     <font>
+                        <Font name="Microsoft YaHei" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="usertype" alignment="CENTER" prefHeight="40.0" prefWidth="120.0" text="超级管理员" textFill="#21d011">
+                     <font>
+                        <Font name="Microsoft YaHei" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label id="quit" fx:id="quit" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#quit_action" prefHeight="40.0" prefWidth="80.0" text="注销">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</GridPane>

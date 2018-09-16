@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane  xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HeaderController1">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="58.0" prefWidth="886.0">
+         <children>
+            <HBox layoutX="572.0" layoutY="4.0" prefHeight="50.0" prefWidth="300.0">
+               <children>
+                  <Button fx:id="login" mnemonicParsing="false" onAction="#loginAction" prefHeight="40.0" prefWidth="60.0" text="登录">
+                     <font>
+                        <Font name="Microsoft YaHei" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="60.0" text="|" textAlignment="CENTER" textFill="#06e846">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="4.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button fx:id="register" mnemonicParsing="false" onAction="#registerAction" prefHeight="40.0" prefWidth="60.0" text="注册">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</GridPane>

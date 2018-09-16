@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+
+<GridPane fx:controller="controller.Test1" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="347.0" prefWidth="300.0">
+         <children>
+            <Button fx:id="btn" layoutX="96.0" layoutY="126.0" mnemonicParsing="false" onAction="#testAction" text="say hello">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</GridPane>

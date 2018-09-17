@@ -14,6 +14,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.BackgroundImage;
+import javafx.scene.layout.BackgroundPosition;
+import javafx.scene.layout.BackgroundRepeat;
+import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderStroke;
 import javafx.scene.layout.BorderStrokeStyle;
@@ -29,14 +33,15 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.effect.DropShadow;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import params.LoginRegisterParems;
-
+import frame.UiEffext;
 public class Main extends Application{
 	private int a = 0;
-	
+	private UiEffext uiEffext;
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
@@ -69,6 +74,7 @@ public class Main extends Application{
 	//		test2.setPrefWidth(600.0);
 	//		test2.setPrefHeight(400.0);
 			
+			
 			VBox vb_center_left = new VBox();
 			vb_center_left.setPrefWidth(200.0);
 			vb_center_left.setPrefHeight(426.0);
@@ -80,7 +86,6 @@ public class Main extends Application{
 			vb_center_right.setPrefHeight(426.0);
 			vb_center_right.setPadding(new Insets(2,2,2,2));
 			HBox.setMargin(vb_center_right, new Insets(2,5,2,0));
-			vb_center_right.setBorder(new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID,CornerRadii.EMPTY,BorderWidths.DEFAULT)));
 			
 			
 			HBox hb_center = new HBox(vb_center_left,vb_center_right);
@@ -141,23 +146,32 @@ public class Main extends Application{
 							hb_header.getChildren().add(pane_header);
 						}
 					}
+					
 					if(LoginRegisterParems.isLogin_stage()) {
 						if(!vb_center_right.getChildren().contains(pane_center_right_login)) {
 							vb_center_right.getChildren().add(pane_center_right_login);
+							UiEffext uiEffext=new UiEffext();
+							uiEffext.logToRe(vb_center_right);
 						}
 					}else {
+						
+						
+						
 						vb_center_right.getChildren().remove(pane_center_right_login);
 					}
 					if(LoginRegisterParems.isRegister_stage()) {
 						if(!vb_center_right.getChildren().contains(pane_center_right_register)) {
 							vb_center_right.getChildren().add(pane_center_right_register);
+							UiEffext uiEffext=new UiEffext();
+							uiEffext.logToRe(vb_center_right);
+							
 						}
 					}else {
+						
 						vb_center_right.getChildren().remove(pane_center_right_register);
 					}
 				}
 			});
-			
 			root.getChildren().add(vb_all);
 			primaryStage.setScene(new Scene(root,900,600));
 			primaryStage.setTitle("Testing");
@@ -169,7 +183,6 @@ public class Main extends Application{
 		
 		
 	}
-	
 	public static void main(String [] args) {
 		launch(args);
 	}

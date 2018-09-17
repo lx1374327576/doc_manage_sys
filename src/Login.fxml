@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.GridPane?>
 
-
-<GridPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" stylesheets="@Header.css" fx:controller="controller.LoginController">
+<GridPane stylesheets="@Header.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
    <columnConstraints>
       <ColumnConstraints />
    </columnConstraints>
@@ -16,7 +15,7 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <Pane id="login_stage"  prefHeight="422.0" prefWidth="666.0">
+      <Pane id="login_stage" prefHeight="422.0" prefWidth="666.0" >
          <children>
             <GridPane layoutX="108.0" layoutY="61.0" prefHeight="200.0" prefWidth="450.0">
               <columnConstraints>
@@ -30,12 +29,12 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label id="username"  alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="70.0" text="用户名" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <Label id="username" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="70.0" text="用户名" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Microsoft YaHei" size="20.0" />
                      </font>
                   </Label>
-                  <Label id="password"  alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="70.0" text="密码" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                  <Label id="password" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="70.0" text="密码" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <font>
                         <Font name="Microsoft YaHei" size="20.0" />
                      </font>

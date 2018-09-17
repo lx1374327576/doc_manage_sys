@@ -1,6 +1,6 @@
 package model;
 
-public class LoginModel extends BaseObject{
+public class Register extends BaseObject{
 	
 	private String password;
 	private String username;

@@ -4,10 +4,10 @@ public class Register extends BaseObject{
 	
 	private String password;
 	private String username;
-	private String usertype; //账号类型
-	private String name;
+	private String usertype; //账号类型  1学生 2宿管 3 导员
+	private String name; 
 	private String number; //学号
-	private String sex;
+	private String sex;// 1 男 2女
 	
 	public String getUsertype() {
 		return usertype;

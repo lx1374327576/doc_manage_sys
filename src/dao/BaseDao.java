@@ -110,4 +110,17 @@ public class BaseDao {
         return result;
     }
 
+    public int get_count(String str) {
+    	int columnCount=-1;
+    	executeQuery(str);
+    	List list = new ArrayList();
+    	list=convertList(rs);
+    	try {
+    		columnCount=list.size();
+    	}catch(Exception e) {
+    		 e.printStackTrace();
+    	}
+    	return columnCount;
+    }
+    
 }

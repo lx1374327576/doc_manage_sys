@@ -1,0 +1,23 @@
+#footer_stage{
+	-fx-background-color:#38a5db;
+}
+
+#about,#connect,#recruit,#link,#address,#telephone{
+	-fx-text-fill: #ffffff;
+}
+
+
+
+#personal{
+	-fx-background-color:#38a5db;
+	-fx-background-insets: 0 0 -1 0, 0;
+    -fx-background-radius: 3, 3;
+    -fx-shadow-highlight-color:#f3622d;
+    -fx-outer-border:#f3622d;
+    -fx-text-fill:#ffffff;
+}
+
+#personal:hover{
+	-fx-padding:5 0 0 0;
+}
+

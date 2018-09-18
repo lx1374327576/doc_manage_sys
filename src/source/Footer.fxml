@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane id="footer_stage" prefHeight="76.0" prefWidth="886.0">
+         <children>
+            <HBox layoutX="243.0" prefHeight="35.0" prefWidth="400.0">
+               <children>
+                  <Label id="about" alignment="CENTER" prefHeight="30.0" prefWidth="80.0" text="关于我们">
+                     <HBox.margin>
+                        <Insets left="40.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label id="connect" alignment="CENTER" prefHeight="30.0" prefWidth="80.0" text="联系我们">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label id="recruit" alignment="CENTER" prefHeight="30.0" prefWidth="80.0" text="招聘人才">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label id="link" alignment="CENTER" prefHeight="30.0" prefWidth="80.0" text="友情链接">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox layoutX="343.0" layoutY="35.0" prefHeight="35.0" prefWidth="200.0">
+               <children>
+                  <Label id="address" alignment="CENTER" prefWidth="160.0" text="北京邮电大学学五518">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label id="telephone" alignment="CENTER" prefWidth="160.0" text="电话：13757578780">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</GridPane>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane id="header_stage" prefHeight="56.0" prefWidth="886.0" GridPane.rowIndex="1">
+         <children>
+            <HBox layoutX="100.0" layoutY="3.0" prefHeight="50.0" prefWidth="625.0">
+               <children>
+                  <MenuButton id="personal" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="个人信息">
+                     <font>
+                        <Font name="Microsoft YaHei" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="个人信息" />
+                     </items>
+                  </MenuButton>
+                  <MenuButton id="apply" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="申请">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="学生申请" />
+                      <MenuItem mnemonicParsing="false" text="导员批复" />
+                    </items>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </MenuButton>
+                  <MenuButton id="question" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="询问">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="询问" />
+                    </items>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </MenuButton>
+                  <MenuButton id="lost" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="失物招领">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="拾物" />
+                      <MenuItem mnemonicParsing="false" text="寻物" />
+                    </items>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </MenuButton>
+                  <MenuButton id="inquiry" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="查询">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="空闲宿舍" />
+                      <MenuItem mnemonicParsing="false" text="舍友信息" />
+                        <MenuItem mnemonicParsing="false" text="申请情况" />
+                        <MenuItem mnemonicParsing="false" text="门禁情况" />
+                        <MenuItem mnemonicParsing="false" text="门禁信息" />
+                        <MenuItem mnemonicParsing="false" text="学生信息" />
+                        <MenuItem mnemonicParsing="false" text="异常学生名单" />
+                        <MenuItem mnemonicParsing="false" text="宿舍内学生" />
+                    </items>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </MenuButton>
+                  <MenuButton id="touch" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="联系我们">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="联系我们" />
+                    </items>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </MenuButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="736.0" prefHeight="25.0" prefWidth="150.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="100.0" text="欢迎：啊啊啊" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="736.0" layoutY="25.0" prefHeight="25.0" prefWidth="150.0">
+               <children>
+                  <Button id="logout" mnemonicParsing="false" prefHeight="25.0" text="注销" />
+               </children></HBox>
+         </children>
+      </Pane>
+   </children>
+</GridPane>

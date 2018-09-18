@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextArea prefHeight="100.0" prefWidth="200.0" />
+      <Button layoutX="330.0" layoutY="10.0" mnemonicParsing="false" text="个人申请" />
+      <Button layoutX="410.0" layoutY="10.0" mnemonicParsing="false" text="问询功能" />
+      <Button layoutX="490.0" layoutY="10.0" mnemonicParsing="false" text="失物招领" />
+      <Button layoutX="570.0" layoutY="10.0" mnemonicParsing="false" text="查询功能" />
+      <Button layoutX="650.0" layoutY="10.0" mnemonicParsing="false" text="联系我们" />
+      <Button layoutX="250.0" layoutY="10.0" mnemonicParsing="false" text="个人信息" />
+      <TextField layoutX="720.0" layoutY="10.0" text="欢迎您,XXX" />
+      <Button layoutX="780.0" layoutY="40.0" mnemonicParsing="false" text="注销" />
+      <Button layoutX="80.0" layoutY="120.0" mnemonicParsing="false" text="姓名" />
+      <Button layoutX="80.0" layoutY="160.0" mnemonicParsing="false" text="性别" />
+      <Button layoutX="400.0" layoutY="120.0" mnemonicParsing="false" text="宿舍楼" />
+      <Button layoutX="400.0" layoutY="160.0" mnemonicParsing="false" text="宿舍号" />
+      <Button layoutX="80.0" layoutY="200.0" mnemonicParsing="false" text="学号/工号" />
+      <Button layoutX="400.0" layoutY="200.0" mnemonicParsing="false" text="是否为宿舍长" />
+      <Button layoutX="80.0" layoutY="240.0" mnemonicParsing="false" text="邮箱" />
+      <Button layoutX="80.0" layoutY="280.0" mnemonicParsing="false" text="电话" />
+      <TextField layoutX="180.0" layoutY="120.0" />
+      <TextField layoutX="180.0" layoutY="160.0" />
+      <TextField layoutX="180.0" layoutY="200.0" />
+      <TextField layoutX="180.0" layoutY="240.0" />
+      <TextField layoutX="180.0" layoutY="280.0" />
+      <Button layoutX="400.0" layoutY="240.0" mnemonicParsing="false" text="原密码" />
+      <Button layoutX="400.0" layoutY="280.0" mnemonicParsing="false" text="新密码" />
+      <Button layoutX="400.0" layoutY="320.0" mnemonicParsing="false" text="确认新密码" />
+      <Button layoutX="700.0" layoutY="400.0" mnemonicParsing="false" text="修改" />
+      <ChoiceBox layoutX="500.0" layoutY="200.0" prefWidth="150.0" />
+      <TextField layoutX="500.0" layoutY="120.0" />
+      <TextField layoutX="500.0" layoutY="160.0" />
+      <TextField layoutX="500.0" layoutY="240.0" />
+      <TextField layoutX="500.0" layoutY="280.0" />
+      <TextField layoutX="500.0" layoutY="320.0" />
+   </children>
+</Pane>

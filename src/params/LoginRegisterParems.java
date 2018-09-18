@@ -1,6 +1,6 @@
 package params;
 
-public class Parems {
+public class LoginRegisterParems {
 	
 	private static  boolean user_login = false;
 	private static boolean login_stage = true;
@@ -11,7 +11,7 @@ public class Parems {
 	}
 	
 	public static void setUser_login(boolean user_login) {
-		Parems.user_login = user_login;
+		LoginRegisterParems.user_login = user_login;
 	}
 	
 	public static boolean isLogin_stage() {
@@ -19,7 +19,7 @@ public class Parems {
 	}
 	
 	public static void setLogin_stage(boolean login_stage) {
-		Parems.login_stage = login_stage;
+		LoginRegisterParems.login_stage = login_stage;
 	}
 	
 	public static boolean isRegister_stage() {
@@ -27,7 +27,7 @@ public class Parems {
 	}
 	
 	public static void setRegister_stage(boolean register_stage) {
-		Parems.register_stage = register_stage;
+		LoginRegisterParems.register_stage = register_stage;
 	}
 
 }

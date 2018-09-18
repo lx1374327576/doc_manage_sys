@@ -6,6 +6,22 @@
 	-fx-text-fill: #ffffff;
 }
 
+#logo{
+	-fx-background-image:url("../images/logo.jpg");
+}
+
+#word1{
+	-fx-background-image:url("../images/word2.jpg");
+}
+
+#photo1{
+	-fx-background-image:url("../images/photo1.jpg");
+}
+
+#login_stage{
+	-fx-background-color:#35f0b5;
+}
+
 
 
 #personal{

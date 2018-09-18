@@ -14,7 +14,7 @@ import java.util.Map;
 public class BaseDao {
 
     private final String DRIVER="com.microsoft.sqlserver.jdbc.SQLServerDriver";
-    private final String URL= "jdbc:sqlserver://10.205.3.176:1435;databaseName=test";
+    private final String URL= "jdbc:sqlserver://10.205.3.170:1435;databaseName=test";
     private final String USERNAME = "sa";
     private final String PWD = "sql2016";
 

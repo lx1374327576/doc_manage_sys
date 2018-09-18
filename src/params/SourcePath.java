@@ -11,8 +11,11 @@ public class SourcePath {
 		String HomePage = "";
 		String Contact = "";
 		String Personal = "";
+		String Login = "../source/Login.fxml";
+		String Apply = "../source/Apply.fxml";
 		
-		allList.add(Personal);		
+		allList.add(Login);	
+		allList.add(Apply);
 		
 		
 		return allList;

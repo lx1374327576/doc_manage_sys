@@ -1,31 +1,36 @@
 package controller;
 
-import javafx.animation.TranslateTransition;
+
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.layout.Pane;
-import javafx.util.Duration;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 
 public class RegisterController {
-	
-	
+	@FXML
+	private TextField name;
+	@FXML
+	private TextField number;
+	@FXML
+	private TextField username_text;
+	@FXML
+	private PasswordField password;
+	@FXML
+	private PasswordField password_repeat;
+	@FXML
+	private TextField male;
+	@FXML
+	private TextField type;
 	
 	@FXML
-	private Pane regist;
+	protected void  comeback_action(ActionEvent event){
+		
+	}
 	
 	@FXML
-	private Button callback;
-	
-	@FXML
-	private Button test;
-	
-	TranslateTransition translateTransition = new TranslateTransition(Duration.millis(2000),test);
-	
-	@FXML
-	protected void callbackaction(ActionEvent event) {
-		translateTransition.setFromX(translateTransition.getFromX());
-		translateTransition.setToX(100);
+	protected void  sure_action(ActionEvent event){
+		
 	}
 
 }

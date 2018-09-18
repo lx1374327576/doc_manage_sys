@@ -92,6 +92,7 @@
                <children>
                   <Button id="logout" mnemonicParsing="false" prefHeight="25.0" text="注销" />
                </children></HBox>
+            <Pane id="logo" layoutX="14.0" layoutY="3.0" prefHeight="50.0" prefWidth="50.0" />
          </children>
       </Pane>
    </children>

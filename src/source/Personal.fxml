@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane id="personal_stage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="controller.PersonalController" stylesheets="@main.css">
+   <children>
+      <TextField fx:id="name" layoutX="190.0" layoutY="130.0" prefHeight="20.0" prefWidth="150.0" />
+      <TextField fx:id="male" layoutX="190.0" layoutY="170.0" prefHeight="20.0" prefWidth="150.0" />
+      <TextField fx:id="number" layoutX="190.0" layoutY="210.0" prefHeight="20.0" prefWidth="150.0" />
+      <TextField fx:id="mail" layoutX="190.0" layoutY="250.0" prefHeight="20.0" prefWidth="150.0" />
+      <TextField fx:id="phone_number" layoutX="190.0" layoutY="290.0" prefHeight="20.0" prefWidth="150.0" />
+      <Button layoutX="720.0" layoutY="305.0" mnemonicParsing="false" onAction="#change_action" prefHeight="50.0" prefWidth="100.0" text="修改">
+         <font>
+            <Font name="Microsoft YaHei Light" size="18.0" />
+         </font></Button>
+      <TextField fx:id="building" layoutX="510.0" layoutY="130.0" prefHeight="20.0" prefWidth="150.0" />
+      <TextField fx:id="building_number" layoutX="510.0" layoutY="170.0" prefHeight="20.0" prefWidth="150.0" />
+      <PasswordField fx:id="old_password" layoutX="510.0" layoutY="250.0" prefWidth="150.0" />
+      <PasswordField fx:id="new_password" layoutX="510.0" layoutY="290.0" prefWidth="150.0" />
+      <PasswordField fx:id="new_password_sure" layoutX="510.0" layoutY="330.0" prefWidth="150.0" />
+      <Label layoutX="125.0" layoutY="130.0" prefHeight="20.0" prefWidth="60.0" text="姓名">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font></Label>
+      <Label layoutX="125.0" layoutY="170.0" prefHeight="20.0" prefWidth="60.0" text="性别">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font></Label>
+      <Label layoutX="125.0" layoutY="210.0" prefHeight="20.0" prefWidth="60.0" text="学号">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font></Label>
+      <Label layoutX="125.0" layoutY="250.0" prefHeight="20.0" prefWidth="60.0" text="邮箱">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font></Label>
+      <Label layoutX="125.0" layoutY="290.0" prefHeight="20.0" prefWidth="60.0" text="电话">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font></Label>
+      <Label layoutX="445.0" layoutY="130.0" prefHeight="20.0" prefWidth="60.0" text="宿舍楼">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font></Label>
+      <Label layoutX="445.0" layoutY="170.0" prefHeight="20.0" prefWidth="60.0" text="宿舍号">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font></Label>
+      <Label layoutX="445.0" layoutY="210.0" prefHeight="20.0" prefWidth="60.0" text="是否为舍长">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font></Label>
+      <Label layoutX="445.0" layoutY="250.0" prefHeight="20.0" prefWidth="60.0" text="原密码">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font></Label>
+      <Label layoutX="445.0" layoutY="290.0" prefHeight="20.0" prefWidth="60.0" text="新密码">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font></Label>
+      <Label layoutX="445.0" layoutY="330.0" prefHeight="20.0" prefWidth="60.0" text="确认密码">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font></Label>
+      <TextField fx:id="is_team" layoutX="510.0" layoutY="210.0" prefHeight="20.0" prefWidth="150.0" promptText="是/否" />
+   </children>
+</Pane>

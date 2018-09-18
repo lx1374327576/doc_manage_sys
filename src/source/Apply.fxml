@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane id="Apply_stage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="886.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ApplyController">
+   <children>
+      <Button layoutX="700.0" layoutY="310.0" mnemonicParsing="false" onAction="#put_action" prefHeight="50.0" prefWidth="100.0" text="提交">
+         <font>
+            <Font name="Microsoft YaHei Light" size="18.0" />
+         </font></Button>
+      <MenuButton fx:id="apply_type" layoutX="250.0" layoutY="80.0" mnemonicParsing="false"  prefWidth="150.0">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#leave_action" text="离校" />
+          <MenuItem mnemonicParsing="false" onAction="#night_action" text="夜归" />
+            <MenuItem mnemonicParsing="false" onAction="#team_action" text="宿舍长申请" />
+            <MenuItem mnemonicParsing="false" onAction="#change_action" text="换寝" />
+            <MenuItem mnemonicParsing="false" onAction="#report_action" text="报修" />
+        </items>
+      </MenuButton>
+      <TextArea fx:id="message" layoutX="550.0" layoutY="80.0" prefHeight="200.0" prefWidth="250.0" />
+      <TextField fx:id="leave_time" layoutX="250.0" layoutY="120.0" prefWidth="150.0" visible="false" />
+      <TextField fx:id="comeback_time" layoutX="250.0" layoutY="160.0" prefWidth="150.0" visible="false" />
+      <TextField fx:id="night_time" layoutX="250.0" layoutY="200.0" prefWidth="150.0" visible="false" />
+      <TextField fx:id="number" layoutX="250.0" layoutY="240.0" prefWidth="150.0" visible="false" />
+      <TextField fx:id="new_number" layoutX="250.0" layoutY="280.0" prefWidth="150.0" visible="false" />
+      <TextField fx:id="report_time" layoutX="250.0" layoutY="320.0" prefWidth="150.0" visible="false" />
+      <Label layoutX="185.0" layoutY="80.0" prefHeight="20.0" prefWidth="60.0" text="申请类型">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="leave" layoutX="185.0" layoutY="120.0" prefHeight="20.0" prefWidth="60.0" text="离校时间" visible="false">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="comeback" layoutX="185.0" layoutY="160.0" prefHeight="20.0" prefWidth="60.0" text="返校时间" visible="false">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="night" layoutX="185.0" layoutY="200.0" prefHeight="20.0" prefWidth="60.0" text="夜归时间" visible="false">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="number_name" layoutX="185.0" layoutY="240.0" prefHeight="20.0" prefWidth="60.0" text="宿舍号" visible="false">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="new_number_name" layoutX="185.0" layoutY="280.0" prefHeight="20.0" prefWidth="60.0" text="新宿舍号" visible="false">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="report" layoutX="185.0" layoutY="320.0" prefHeight="20.0" prefWidth="60.0" text="报修时间" visible="false">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

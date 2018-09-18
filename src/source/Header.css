@@ -1,0 +1,76 @@
+
+/*界面顶部 */
+
+#header{
+	-fx-background-color:#38a5db;
+}
+
+#login:hover,#register:hover{
+	-fx-text-fill:#ff8800;
+	-fx-font-size:22px;
+	-fx-cursor:HAND;
+}
+
+#test{
+	-fx-background-color:#ff3930;
+	-fx-transition: 1s 1s height ease;
+}
+
+#test:hover{
+	-fx-pref-width:50px;
+	-fx-pref-height:50px;
+	-fx-translate-x:15;
+}
+
+#quit:hover{
+	-fx-cursor:HAND;
+	-fx-font-size:24px;
+	-fx-text-fill:#ff3930;
+}
+
+
+
+/*登录界面 */	
+#login_stage{
+	-fx-background-color: #38a5db;
+}
+
+#sign_in:hover,#sign_up:hover{
+	-fx-text-fill:#ff8800;
+	-fx-font-size:32px;
+	-fx-cursor:HAND;
+}
+
+
+
+
+/*注册界面 */
+#register_stage{
+	-fx-background-color: #38a5db;
+}
+
+#register_label:hover{
+	-fx-text-fill:#ff8800;
+	-fx-font-size:32px;
+	-fx-cursor:HAND;
+}
+
+
+/*脚注 
+#footer_left,#footer_right{
+	-fx-background-image:url("images/test.jpg");
+}
+*
+* 
+*/
+#about:hover,#connect:hover,#people:hover,#link:hover{
+	-fx-cursor:HAND;
+	-fx-text-fill:#09eb27;
+}
+
+#footer_stage{
+	-fx-background-color:#38a5db;
+}
+
+
+

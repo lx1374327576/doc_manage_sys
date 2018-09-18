@@ -32,7 +32,7 @@ class BaseDaoTest extends BaseDao{
 
 	public static void main(String []args) {
 		BaseDaoTest baseDaoTest=new BaseDaoTest();
-		baseDaoTest.query("Select * from MoneyTotal;");
-		baseDaoTest.update("Delete from MoneyTotal where xxxx<500;");
+		baseDaoTest.query("Select * from sys_user where id=?",1);
+		//baseDaoTest.update("Delete from MoneyTotal where xxxx<500;");
 	}
 }

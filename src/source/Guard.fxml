@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:controller="controller.GuardController" stylesheets="@main.css" id="guard_stage" fx:id="guard_stage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#add_data_action" prefHeight="442.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="table" layoutX="286.0" layoutY="100.0" prefHeight="220.0" prefWidth="195.0">
+        <columns>
+          <TableColumn fx:id="message" prefWidth="194.20001220703125" text="门禁信息" />
+        </columns>
+      </TableView>
+      <Label layoutX="60.0" layoutY="120.0" prefHeight="20.0" prefWidth="40.0" text="姓名">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="160.0" prefHeight="20.0" prefWidth="40.0" text="学号">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="200.0" text="宿舍楼">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="240.0" text="宿舍号">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="name" layoutX="120.0" layoutY="120.0" prefHeight="20.0" prefWidth="120.0">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="number" layoutX="120.0" layoutY="160.0" prefHeight="20.0" prefWidth="120.0">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="building" layoutX="120.0" layoutY="200.0" prefHeight="20.0" prefWidth="120.0">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="room_number" layoutX="120.0" layoutY="240.0" prefHeight="20.0" prefWidth="120.0">
+         <font>
+            <Font name="Microsoft YaHei" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="60.0" layoutY="310.0" mnemonicParsing="false" onAction="#back_action" prefHeight="30.0" prefWidth="100.0" text="返回">
+         <font>
+            <Font name="Microsoft YaHei Light" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

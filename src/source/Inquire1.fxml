@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:controller="controller.Inquire1Controller" stylesheets="@main.css" id="inquire1_stage" fx:id="inquire1_stage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#add_data_action" prefHeight="442.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="table1" layoutX="70.0" layoutY="70.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="empty_room" prefWidth="101.60000228881836" text="空宿舍号" />
+          <TableColumn fx:id="empty_number" prefWidth="98.39996337890625" text="空床位数" />
+        </columns>
+      </TableView>
+      <TableView fx:id="table2" layoutX="340.0" layoutY="70.0" prefHeight="200.0" prefWidth="240.0">
+        <columns>
+          <TableColumn fx:id="roommate_name" minWidth="0.0" prefWidth="91.20001220703125" text="舍友姓名" />
+          <TableColumn fx:id="roommate_number" prefWidth="144.0" text="联系方式" />
+        </columns>
+      </TableView>
+      <TableView fx:id="table3" layoutX="670.0" layoutY="70.0" prefHeight="200.0" prefWidth="150.0">
+        <columns>
+          <TableColumn fx:id="time" prefWidth="149.20001220703125" text="我的刷卡时间" />
+        </columns>
+      </TableView>
+      <Button layoutX="720.0" layoutY="300.0" mnemonicParsing="false" onAction="#myapply_action" prefHeight="30.0" prefWidth="100.0" text="我的申请">
+         <font>
+            <Font name="Microsoft YaHei Light" size="18.0" />
+         </font></Button>
+   </children>
+</Pane>

@@ -8,8 +8,8 @@ public class SourcePath {
 	public static List<String> url(){
 		List<String> allList = new ArrayList<String>();
 		
-		String HomePage = "";
-		String Contact = "";
+		String HomePage = "../source/Homepage.fxml";
+		String Contact = "../source/Contact.fxml";
 		String Personal = "../source/Personal.fxml";
 		String Register = "../source/Register.fxml";
 		String Login = "../source/Login.fxml";
@@ -22,6 +22,8 @@ public class SourcePath {
 		
 		
 		
+		allList.add(HomePage);
+		allList.add(Contact);
 		allList.add(Personal);
 		allList.add(Register);
 		allList.add(Login);	

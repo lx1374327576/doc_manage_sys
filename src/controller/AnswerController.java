@@ -3,6 +3,7 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -14,9 +15,9 @@ public class AnswerController {
 	@FXML
 	private Pane answer_stage;
 	@FXML
-	private TextField questioner_text;
+	private Label questioner_text;
 	@FXML
-	private TextField question_text;
+	private Label question_text;
 	@FXML
 	private TextArea my_answer;
 	

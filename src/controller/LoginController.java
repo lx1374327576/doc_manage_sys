@@ -14,6 +14,7 @@ import javafx.util.Duration;
 import model.Login;
 import service.LoginService;
 import pop.PopWindow;
+import params.Parems;
 
 public class LoginController {
 	@FXML
@@ -34,7 +35,7 @@ public class LoginController {
 		int islogin = new LoginService().sign_in(text);
 		if (islogin == 1) {
 			System.out.println("1");
-			
+			Parems.setUsername(username_text.getText());
 		}else {
 			System.out.println("0");
 			new PopWindow().alert_informationDialog("用户登录错误提示!","用户名或密码不正确!");

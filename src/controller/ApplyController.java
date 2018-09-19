@@ -1,15 +1,17 @@
 package controller;
 
-
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import model.Apply;
+import params.Parems;
+import service.ApplyService;
 
 public class ApplyController {
+	private String type = "0";
 	@FXML
 	private TextArea message;	
 	@FXML
@@ -55,7 +57,9 @@ public class ApplyController {
 		report_time.setVisible(false);
 		message.clear();
 		
+		type = "1";
 		
+		apply_type.setText("¿Î–£");
 		
 		leave.setVisible(true);
 		leave_time.setVisible(true);
@@ -81,6 +85,9 @@ public class ApplyController {
 		report_time.setVisible(false);
 		message.clear();
 		
+		type = "2";
+		
+		apply_type.setText("“ππÈ");
 		
 		night.setVisible(true);
 		night_time.setVisible(true);
@@ -104,6 +111,9 @@ public class ApplyController {
 		report_time.setVisible(false);
 		message.clear();
 		
+		type = "3";
+		apply_type.setText("Àﬁ…·≥§…Í«Î");
+		
 		number_name.setVisible(true);
 		number.setVisible(true);
 	}
@@ -124,6 +134,8 @@ public class ApplyController {
 		report_time.setVisible(false);
 		message.clear();
 		
+		type = "4";
+		apply_type.setText("ªª«ﬁ");
 		
 		number_name.setVisible(true);
 		number.setVisible(true);
@@ -147,6 +159,8 @@ public class ApplyController {
 		report_time.setVisible(false);
 		message.clear();
 		
+		type = "5";
+		apply_type.setText("±®–ﬁ");
 		
 		number_name.setVisible(true);
 		number.setVisible(true);
@@ -158,6 +172,32 @@ public class ApplyController {
 	
 	@FXML
 	protected void  put_action(ActionEvent event){
+		if(type.equals("0")) {
+			message.clear();
+			return;
+		}
+		Apply apply = new Apply();
+		apply.setInfo(message.getText());
+		apply.setDom_number(number.getText());
+		apply.setNew_dom_number(new_number.getText());
+		if(type.equals("5")) {
+			apply.setLeave_time(report.getText());
+		}else if(type.equals("1")){
+			apply.setLeave_time(leave_time.getText());
+		}
+		if(type.equals("1")) {
+			apply.setBack_time(comeback_time.getText());
+		}else if(type.equals("2")) {
+			apply.setBack_time(night_time.getText());
+		}
+		apply.setBack_time(comeback_time.getText());
+		apply.setUsername(Parems.getUsername());
+		apply.setApply_type(type);
+		
+		ApplyService a = new ApplyService();
+		a.submit(apply);
+		
+		
 		leave.setVisible(false);
 		leave_time.setVisible(false);
 		comeback.setVisible(false);
@@ -171,6 +211,8 @@ public class ApplyController {
 		report.setVisible(false);
 		report_time.setVisible(false);
 		message.clear();
+		
+		//“≥√ÊÃ¯◊™
 		
 		
 	}

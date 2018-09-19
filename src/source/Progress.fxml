@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:controller="controller.ProgressController" stylesheets="@main.css" id="progress_stage" fx:id="progress_stage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#add_data_action" prefHeight="442.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane id="progress_stage" fx:id="progress_stage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#add_data_action" prefHeight="442.0" prefWidth="886.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProgressController">
    <children>
       <TableView fx:id="table" layoutX="80.0" layoutY="70.0" prefHeight="200.0" prefWidth="370.0">
         <columns>
@@ -23,5 +23,6 @@
          <font>
             <Font name="Microsoft YaHei Light" size="18.0" />
          </font></Button>
+      <Pane id="photo9" layoutX="484.0" layoutY="42.0" prefHeight="359.0" prefWidth="388.0" />
    </children>
 </Pane>

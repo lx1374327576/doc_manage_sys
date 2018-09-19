@@ -18,9 +18,50 @@
 	-fx-background-image:url("../images/photo1.jpg");
 }
 
-#login_stage{
+#photo2{
+	-fx-background-image:url("../images/photo2.jpg");
+}
+
+#photo3{
+	-fx-background-image:url("../images/photo3.jpg");
+}
+
+#photo4{
+	-fx-background-image:url("../images/photo4.jpg");
+}
+
+#photo5{
+	-fx-background-image:url("../images/photo5.jpg");
+}
+
+#photo6{
+	-fx-background-image:url("../images/photo6.jpg");
+}
+
+#photo7{
+	-fx-background-image:url("../images/photo7.jpg");
+}
+
+#photo8{
+	-fx-background-image:url("../images/photo8.jpg");
+}
+
+#photo9{
+	-fx-background-image:url("../images/photo9.jpg");
+}
+
+#photo10{
+	-fx-background-image:url("../images/photo10.jpg");
+}
+
+#login_stage,#register_stage,#reply1_stage,#reply2_stage,#progress_stage,#ask_stage,#homepage_stage,#answer_stage,#contact_stage{
 	-fx-background-color:#35f0b5;
 }
+
+#guard_stage,#personal_stage,#apply_stage,#question_and_answer_stage,#question_stage{
+	-fx-background-color:#35f0b5;
+}
+
 
 
 

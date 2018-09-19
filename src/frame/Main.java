@@ -64,8 +64,8 @@ public class Main extends Application{
 			ScrollPane scrollPane = new ScrollPane();
 			scrollPane.getStyleClass().add("edge-to-edge");
 			scrollPane.setVbarPolicy(ScrollBarPolicy.NEVER);
-			scrollPane.setPrefHeight(426);
-			scrollPane.setFitToHeight(true);
+			scrollPane.setVmax(0.0);
+			scrollPane.setVmin(0.0);
 //			scrollPane.setHbarPolicy(ScrollBarPolicy.NEVER);
 			scrollPane.setContent(main_pane);
 			scrollPane.setVvalue(1);

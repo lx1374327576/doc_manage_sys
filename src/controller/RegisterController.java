@@ -2,10 +2,17 @@ package controller;
 
 
 
+import frame.Main;
+import javafx.animation.Interpolator;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleButton;
+import javafx.util.Duration;
 import model.Register;
 import service.RegisterService;
 
@@ -27,13 +34,22 @@ public class RegisterController {
 	
 	@FXML
 	protected void  comeback_action(ActionEvent event){
-		
+		//点击“返回”跳转初始页面
+		KeyValue kValue=new KeyValue(Main.scrollPane.hvalueProperty(), 0,Interpolator.EASE_OUT);
+		Timeline timeline=new Timeline();
+		timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5), kValue));
+		timeline.play();
 	}
 	
 	@FXML
 	protected void  sure_action(ActionEvent event){
 		String sex = null;
 		String usertype = null;
+		//点击“确定”跳转初始页面
+		KeyValue kValue=new KeyValue(Main.scrollPane.hvalueProperty(), 0,Interpolator.EASE_OUT);
+		Timeline timeline=new Timeline();
+		timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5), kValue));
+		timeline.play();
 		if(!(password.getText().equals(password_repeat.getText()))) {
 			System.out.println("lose");
 			return;
@@ -68,6 +84,8 @@ public class RegisterController {
 		System.out.println(result);
 		
 		
+		
 	}
-
+	
+	
 }

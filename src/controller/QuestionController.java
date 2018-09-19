@@ -7,10 +7,10 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 
@@ -28,9 +28,9 @@ public class QuestionController{
 	private final ObservableList<Information> data = FXCollections.observableArrayList();
 	
 	@FXML
-	private Label publish_people;
+	private TextField publish_people;
 	@FXML
-	private Label question_text;
+	private TextField question_text;
 	@FXML
 	private TextArea detail_text;
 	
@@ -38,7 +38,6 @@ public class QuestionController{
 	
 	@FXML
 	protected void add_data_action(MouseEvent event) {
-		detail_text.setEditable(false);
 		if(flag) {
 			return;
 		}

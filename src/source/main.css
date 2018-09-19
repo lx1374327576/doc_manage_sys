@@ -58,7 +58,11 @@
 	-fx-background-color:#35f0b5;
 }
 
-#guard_stage,#personal_stage,#apply_stage,#question_and_answer_stage,#question_stage{
+#guard_stage,#personal_stage,#apply_stage,#question_and_answer_stage,#question_stage,#question_stage,#apply_stage,#lost_stage,#found_stage{
+	-fx-background-color:#35f0b5;
+}
+
+#show_stage,#inquire1_stage,#inquire2_stage,#inquire3_stage{
 	-fx-background-color:#35f0b5;
 }
 

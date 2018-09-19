@@ -11,10 +11,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleButton;
 import javafx.util.Duration;
 import model.Register;
 import service.RegisterService;
+import pop.PopWindow;
 
 public class RegisterController {
 	@FXML
@@ -51,7 +51,7 @@ public class RegisterController {
 		timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5), kValue));
 		timeline.play();
 		if(!(password.getText().equals(password_repeat.getText()))) {
-			System.out.println("lose");
+			new PopWindow().alert_informationDialog("注册错误提示!","两次密码不一致!");
 			return;
 		}
 		if(male.getText().equals("男")) {
@@ -59,7 +59,7 @@ public class RegisterController {
 		}else if(male.getText().equals("女")) {
 			sex = "2";
 		}else {
-			System.out.println("1");
+			new PopWindow().alert_informationDialog("注册错误提示!","请正确填写性别类型!");
 			return;
 		}
 		if(type.getText().equals("学生")) {
@@ -69,7 +69,7 @@ public class RegisterController {
 		}else if(type.getText().equals("导员")){
 			usertype = "3";
 		}else {
-			System.out.println("2");
+			new PopWindow().alert_informationDialog("注册错误提示!","请正确填写账户类型!");
 			return;
 		}
 		Register register = new Register();
@@ -79,11 +79,12 @@ public class RegisterController {
 		register.setSex(sex);
 		register.setUsername(name.getText());
 		register.setUsertype(usertype);
-		System.out.println("3");
 		int result = new RegisterService().confim(register);
-		System.out.println(result);
-		
-		
+		if(result==1) {
+			//页面跳转
+		}else {
+			new PopWindow().alert_informationDialog("注册错误提示!","用户名已存在!");
+		}
 		
 	}
 	

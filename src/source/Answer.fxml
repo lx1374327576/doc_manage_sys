@@ -46,5 +46,6 @@
             <Font name="Microsoft YaHei" size="12.0" />
          </font>
       </Label>
+      <Pane id="photo7" layoutX="578.0" layoutY="39.0" prefHeight="342.0" prefWidth="283.0" />
    </children>
 </Pane>

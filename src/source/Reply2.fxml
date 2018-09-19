@@ -11,8 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane id="reply2_stage" onMouseMoved="#add_data_action" fx:id="reply2_stage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-fx:controller="controller.Reply2Controller" stylesheets="@main.css">
+<Pane id="reply2_stage" fx:id="reply2_stage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#add_data_action" prefHeight="442.0" prefWidth="886.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Reply2Controller">
    <children>
       <TextField fx:id="name" layoutX="125.0" layoutY="80.0" />
       <TextField fx:id="room" layoutX="125.0" layoutY="120.0" />
@@ -82,5 +81,6 @@ fx:controller="controller.Reply2Controller" stylesheets="@main.css">
             <Font name="Microsoft YaHei" size="12.0" />
          </font>
       </Label>
+      <Pane id="photo3" layoutX="623.0" layoutY="21.0" prefHeight="308.0" prefWidth="224.0" />
    </children>
 </Pane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:controller="controller.Inquire2Controller" stylesheets="@main.css" id="inquire2_stage" fx:id="inquire2_stage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#add_data_action" prefHeight="442.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="table" layoutX="150.0" layoutY="120.0" prefHeight="200.0" prefWidth="567.0">
+        <columns>
+          <TableColumn fx:id="name" prefWidth="123.99999618530273" text="姓名" />
+          <TableColumn fx:id="building" prefWidth="68.79995727539062" text="宿舍楼" />
+            <TableColumn fx:id="room_number" prefWidth="75.19996643066406" text="宿舍号" />
+            <TableColumn fx:id="isroom" prefWidth="91.199951171875" text="是否在宿舍" />
+            <TableColumn fx:id="student_unnormal" prefWidth="74.0" text="学生异常" />
+            <TableColumn fx:id="leave_type" prefWidth="70.0" text="请假类型" />
+            <TableColumn fx:id="edit" prefWidth="61.0" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>

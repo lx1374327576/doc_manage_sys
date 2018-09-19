@@ -33,7 +33,7 @@ public class PersonalController {
 	private Label is_team;
 	
 	@FXML
-	protected void  change_action(ActionEvent event){
+	protected void  sure_action(ActionEvent event){
 		
 	}
 	

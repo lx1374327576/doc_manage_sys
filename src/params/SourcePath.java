@@ -22,6 +22,12 @@ public class SourcePath {
 		String Ask = "../source/Ask.fxml";
 		String Lost = "../source/Lost.fxml";
 		String Found = "../source/Found.fxml";
+		String Show = "../source/Show.fxml";
+		String Inquire1 = "../source/Inquire1.fxml";
+		String Progress = "../source/Progress.fxml";
+		String Inquire3 = "../source/Inquire3.fxml";
+		String Inquire2 = "../source/Inquire2.fxml";
+		String Guard = "../source/Guard.fxml";
 		
 		
 		
@@ -39,6 +45,12 @@ public class SourcePath {
 		allList.add(Ask);
 		allList.add(Lost);
 		allList.add(Found);
+		allList.add(Show);
+		allList.add(Inquire1);
+		allList.add(Progress);
+		allList.add(Inquire3);
+		allList.add(Inquire2);
+		allList.add(Guard);
 		
 		
 		

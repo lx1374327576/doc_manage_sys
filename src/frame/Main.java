@@ -21,7 +21,7 @@ import params.SourcePath;
 
 
 public class Main extends Application{
-	
+	public static ScrollPane scrollPane;
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
@@ -61,7 +61,7 @@ public class Main extends Application{
 				main_pane.getChildren().add(parent);
 			}
 			
-			ScrollPane scrollPane = new ScrollPane();
+			scrollPane = new ScrollPane();
 			scrollPane.getStyleClass().add("edge-to-edge");
 			scrollPane.setVbarPolicy(ScrollBarPolicy.NEVER);
 //			scrollPane.setHbarPolicy(ScrollBarPolicy.NEVER);

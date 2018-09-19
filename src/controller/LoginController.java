@@ -1,11 +1,17 @@
 package controller;
 
+import frame.Main;
+import javafx.animation.Interpolator;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
 import javafx.scene.input.MouseEvent;
+import javafx.util.Duration;
 import model.Login;
 import service.LoginService;
 
@@ -35,6 +41,11 @@ public class LoginController {
 	
 	@FXML
 	protected void sign_up_action(ActionEvent event) {
+		//µã»÷
+		KeyValue kValue=new KeyValue(Main.scrollPane.hvalueProperty(), 0.666,Interpolator.EASE_OUT);
+		Timeline timeline=new Timeline();
+		timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5), kValue));
+		timeline.play();
 		System.out.println("b");
 	}
 	

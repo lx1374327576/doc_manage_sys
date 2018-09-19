@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.GridPane?>
 
-<GridPane stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HeaderController">
    <columnConstraints>
       <ColumnConstraints />
    </columnConstraints>
@@ -34,8 +34,8 @@
                   </MenuButton>
                   <MenuButton id="apply" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="申请">
                     <items>
-                      <MenuItem mnemonicParsing="false" text="学生申请" />
-                      <MenuItem mnemonicParsing="false" text="导员批复" />
+                      <MenuItem mnemonicParsing="false" onAction="#stuApply_action" text="学生申请" />
+                      <MenuItem mnemonicParsing="false" onAction="#teachApply_action" text="导员批复" />
                     </items>
                      <HBox.margin>
                         <Insets top="5.0" />

@@ -4,16 +4,17 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class PersonalController {
 	@FXML
-	private TextField name;
+	private Label name;
 	@FXML
-	private TextField male;
+	private Label male;
 	@FXML
-	private TextField number;
+	private Label number;
 	@FXML
 	private TextField mail;
 	@FXML
@@ -28,6 +29,8 @@ public class PersonalController {
 	private PasswordField new_password;
 	@FXML
 	private PasswordField new_password_sure;
+	@FXML
+	private Label is_team;
 	
 	@FXML
 	protected void  change_action(ActionEvent event){

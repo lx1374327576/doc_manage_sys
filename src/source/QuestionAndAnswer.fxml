@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:controller="controller.QuestionAndAnswerController" stylesheets="@main.css" id="question_and_answer_stage" fx:id="question_and_answer_stage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#add_data_action" prefHeight="442.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="table" layoutX="80.0" layoutY="140.0" prefHeight="200.0" prefWidth="568.0">
+        <columns>
+          <TableColumn fx:id="publish_people" prefWidth="75.0" text="发布人" />
+          <TableColumn fx:id="publish_time" prefWidth="75.0" text="发布时间" />
+            <TableColumn fx:id="question" prefWidth="320.0000762939453" text="问题" />
+            <TableColumn fx:id="edit" prefWidth="84.7999267578125" />
+        </columns>
+      </TableView>
+      <Button layoutX="700.0" layoutY="166.0" mnemonicParsing="false" onAction="#ask_action" prefHeight="40.0" prefWidth="100.0" text="提问">
+         <font>
+            <Font name="Microsoft YaHei Light" size="18.0" />
+         </font></Button>
+      <Button layoutX="700.0" layoutY="250.0" mnemonicParsing="false" onAction="#myproblem_action" prefHeight="40.0" prefWidth="100.0" text="我的问题">
+         <font>
+            <Font name="Microsoft YaHei Light" size="18.0" />
+         </font></Button>
+   </children>
+</Pane>

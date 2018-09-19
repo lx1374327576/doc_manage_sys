@@ -6,21 +6,14 @@ public class Personal extends BaseObject {
 	private String newpassword;
 	private String phone;
 	private String email;
-	private String isroommaster; // 宿舍长 1是 0否
+	private String isroommaster; // {0,1} 是否宿舍长
 	private String username;
 	private String name;
 	private String sex;
 	private String number; //学号
 	private String domitory_building;
 	private String domitory_number;
-	private String isChangePass; // 密码修改 1 通过 0 未通过 -1未执行修改操作
 	
-	public String getIsChangePass() {
-		return isChangePass;
-	}
-	public void setIsChangePass(String isChangePass) {
-		this.isChangePass = isChangePass;
-	}
 	public String getOldpassword() {
 		return oldpassword;
 	}

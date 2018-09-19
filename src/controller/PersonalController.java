@@ -9,6 +9,12 @@ import javafx.scene.control.TextField;
 
 public class PersonalController {
 	@FXML
+	private TextField name;
+	@FXML
+	private TextField male;
+	@FXML
+	private TextField number;
+	@FXML
 	private TextField mail;
 	@FXML
 	private TextField phone_number;

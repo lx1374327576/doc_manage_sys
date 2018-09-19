@@ -23,8 +23,6 @@ public class Reply1Controller {
 	
 	private boolean flag = false;
 	@FXML
-	private Pane reply1_stage;
-	@FXML
 	private TableColumn<ReplyInformation, String> name;
 	@FXML
 	private TableColumn<ReplyInformation, String> number;

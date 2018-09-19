@@ -11,17 +11,18 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane id="reply2_stage" onMouseMoved="#add_data_action" fx:id="reply2_stage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="controller.Reply2Controller" stylesheets="@main.css">
    <children>
       <TextField fx:id="name" layoutX="125.0" layoutY="80.0" />
       <TextField fx:id="room" layoutX="125.0" layoutY="120.0" />
       <TextField fx:id="apply_time" layoutX="125.0" layoutY="160.0" />
       <TextArea fx:id="message" layoutX="125.0" layoutY="240.0" prefHeight="100.0" prefWidth="160.0" />
-      <TextField fx:id="leave_time" layoutX="435.0" layoutY="80.0" />
-      <TextField fx:id="comeback_time" layoutX="435.0" layoutY="120.0" />
-      <TextField fx:id="night_time" layoutX="435.0" layoutY="160.0" />
-      <TextField fx:id="number" layoutX="435.0" layoutY="200.0" />
-      <TextField fx:id="new_number" layoutX="435.0" layoutY="240.0" />
+      <TextField fx:id="leave_time" layoutX="435.0" layoutY="80.0" visible="false" />
+      <TextField fx:id="comeback_time" layoutX="435.0" layoutY="120.0" visible="false" />
+      <TextField fx:id="night_time" layoutX="435.0" layoutY="160.0" visible="false" />
+      <TextField fx:id="number" layoutX="435.0" layoutY="200.0" visible="false" />
+      <TextField fx:id="new_number" layoutX="435.0" layoutY="240.0" visible="false" />
       <Button layoutX="350.0" layoutY="300.0" mnemonicParsing="false" onAction="#refuse_action" prefHeight="30.0" prefWidth="80.0" text="拒绝">
          <font>
             <Font name="Microsoft YaHei Light" size="18.0" />
@@ -56,27 +57,27 @@
             <Font name="Microsoft YaHei" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="370.0" layoutY="240.0" prefHeight="20.0" prefWidth="60.0" text="新宿舍号">
+      <Label fx:id="new_number_name" layoutX="370.0" layoutY="240.0" prefHeight="20.0" prefWidth="60.0" text="新宿舍号" visible="false">
          <font>
             <Font name="Microsoft YaHei" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="370.0" layoutY="200.0" prefHeight="20.0" prefWidth="60.0" text="宿舍号">
+      <Label fx:id="number_name" layoutX="370.0" layoutY="200.0" prefHeight="20.0" prefWidth="60.0" text="宿舍号" visible="false">
          <font>
             <Font name="Microsoft YaHei" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="370.0" layoutY="160.0" prefHeight="20.0" prefWidth="60.0" text="夜归时间">
+      <Label fx:id="night" layoutX="370.0" layoutY="160.0" prefHeight="20.0" prefWidth="60.0" text="夜归时间" visible="false">
          <font>
             <Font name="Microsoft YaHei" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="370.0" layoutY="120.0" prefHeight="20.0" prefWidth="60.0" text="返校时间">
+      <Label fx:id="comeback" layoutX="370.0" layoutY="120.0" prefHeight="20.0" prefWidth="60.0" text="返校时间" visible="false">
          <font>
             <Font name="Microsoft YaHei" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="370.0" layoutY="80.0" prefHeight="20.0" prefWidth="60.0" text="离校时间">
+      <Label fx:id="leave" layoutX="370.0" layoutY="80.0" prefHeight="20.0" prefWidth="60.0" text="离校时间" visible="false">
          <font>
             <Font name="Microsoft YaHei" size="12.0" />
          </font>

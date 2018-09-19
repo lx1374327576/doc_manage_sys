@@ -50,7 +50,7 @@ public class Main extends Application{
 			
 			
 			HBox main_pane = new HBox();
-			main_pane.setMaxHeight(430);
+			main_pane.prefHeight(426);
 			main_pane.setPrefWidth(890);
 			
 			SourcePath sourcePath = new SourcePath();
@@ -64,6 +64,8 @@ public class Main extends Application{
 			ScrollPane scrollPane = new ScrollPane();
 			scrollPane.getStyleClass().add("edge-to-edge");
 			scrollPane.setVbarPolicy(ScrollBarPolicy.NEVER);
+			scrollPane.setPrefHeight(426);
+			scrollPane.setFitToHeight(true);
 //			scrollPane.setHbarPolicy(ScrollBarPolicy.NEVER);
 			scrollPane.setContent(main_pane);
 			scrollPane.setVvalue(1);

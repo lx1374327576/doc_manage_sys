@@ -50,7 +50,6 @@ public class HeaderController {
 			nagivation.setDisable(false);
 			teacher_reply.setVisible(true);
 			teacher_found.setVisible(true);
-			door.setVisible(true);
 		}
 		if(params.Parems.getUser_grade().equals("3")) {
 			nagivation.setDisable(false);

@@ -21,6 +21,7 @@ public class PersonalDao extends BaseDao {
 		tmp.setSex(map.get("sex"));
 		tmp.setName(map.get("name"));
 		tmp.setIsroommaster(map.get("isleader"));
+		if (tmp.getIsroommaster()==null)tmp.setIsroommaster("0");
 		tmp.setPhone(map.get("telephone"));
 		tmp.setNumber(map.get("number"));
 		tmp.setEmail(map.get("email"));

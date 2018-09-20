@@ -105,10 +105,10 @@ public class Reply2Controller {
 		room.setText(list.get(0).getDom_number());
 		apply_time.setText(list.get(0).getApply_time());
 		apply_type.setText(list.get(0).getApply_type());
-		
+		message.setText(list.get(0).getInfo());
 		String type =list.get(0).getApply_type();
 		
-		if(type.equals("¿Î–£")) {
+		if(type.equals("¿Î–£…Í«Î")) {
 			
 			leave.setVisible(false);
 			leave_time.setVisible(false);
@@ -132,7 +132,7 @@ public class Reply2Controller {
 			leave_time.setText(list.get(0).getLeave_time());
 			comeback_time.setText(list.get(0).getBack_time());
 			number.setText(list.get(0).getDom_number());
-		}else if(type.equals("“ππÈ")) {
+		}else if(type.equals("“ππÈ…Í«Î")) {
 			leave.setVisible(false);
 			leave_time.setVisible(false);
 			comeback.setVisible(false);
@@ -168,7 +168,7 @@ public class Reply2Controller {
 			number.setVisible(true);
 			
 			number.setText(list.get(0).getDom_number());
-		}else if(type.equals("ªª«ﬁ")) {
+		}else if(type.equals("ÕÀªª…·…Í«Î")) {
 			leave.setVisible(false);
 			leave_time.setVisible(false);
 			comeback.setVisible(false);
@@ -188,7 +188,7 @@ public class Reply2Controller {
 			
 			number.setText(list.get(0).getDom_number());
 			new_number.setText(list.get(0).getNew_dom_number());
-		}else if(type.equals("±®–ﬁ")) {
+		}else if(type.equals("±®–ﬁ…Í«Î")) {
 			leave.setVisible(false);
 			leave_time.setVisible(false);
 			comeback.setVisible(false);

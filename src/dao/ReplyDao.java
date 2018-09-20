@@ -26,7 +26,7 @@ public class ReplyDao extends BaseDao {
 			tmp.setRepair_time(map.get("data5"));
 			tmp.setLate_time(map.get("data3"));
 			tmp.setApply_id(map.get("apply_id"));
-			tmp.setDom_number(map.get("data6"));
+			tmp.setNew_dom_number(map.get("data6"));
 			tmp.setState(map.get("state"));
 			tmp.setInfo(map.get("ps"));
 			List list2=new ArrayList();

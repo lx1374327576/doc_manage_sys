@@ -8,8 +8,17 @@ public class Parems {
 	private static String user_grade="0";
 	private static String reply_id;
 	private static String student_number;
+	private static boolean flagall = false;
 	
 
+
+	public static boolean isFlagall() {
+		return flagall;
+	}
+
+	public static void setFlagall(boolean flag) {
+		Parems.flagall = flag;
+	}
 
 	public static String getStudent_number() {
 		return student_number;

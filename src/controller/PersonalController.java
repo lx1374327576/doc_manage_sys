@@ -52,6 +52,7 @@ public class PersonalController {
 				new PopWindow().alert_informationDialog("修改错误提示!","原密码不正确!");
 			}else if(result==1) {
 				new PopWindow().alert_informationDialog("提示!","修改成功!");
+				Parems.setFlagall(false);
 				//页面跳转 
 				
 				//页面清空

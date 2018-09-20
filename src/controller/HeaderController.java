@@ -194,6 +194,11 @@ public class HeaderController {
 			timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5), kValue));
 			timeline.play();
 			params.Parems.setUser_grade("0");
+			params.Parems.setFlagall(false);
+			params.Parems.setQuestion_id(null);
+			params.Parems.setReply_id(null);
+			params.Parems.setStudent_number(null);
+			params.Parems.setUsername(null);
 		}
 		student_apply.setVisible(false);
 		student_found.setVisible(false);

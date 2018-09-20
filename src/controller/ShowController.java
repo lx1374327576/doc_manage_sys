@@ -49,7 +49,7 @@ public class ShowController {
 	
 	@FXML
 	protected void add_data_action(MouseEvent event) {
-		if(flage) {
+		if(Parems.isFlagall()) {
 			return;
 		}
 		Personal  model = new Personal();
@@ -75,7 +75,7 @@ public class ShowController {
 		}else if(result.getIsroommaster().equals("0")) {
 			is_team.setText("·ñ");
 		}
-		flage = true;
+		Parems.setFlagall(true);
 	}
 	
 	

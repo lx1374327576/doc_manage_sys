@@ -10,13 +10,65 @@ import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
+import javafx.scene.control.MenuItem;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.util.Duration;
 
 public class HeaderController {
+	@FXML
+	private HBox nagivation;
+	@FXML 
+	 private MenuItem student_apply;
+	
+	@FXML 
+	 private MenuItem teacher_reply;
+	@FXML 
+	 private MenuItem student_found;
+	@FXML 
+	 private MenuItem door;
+	@FXML 
+	 private MenuItem teacher_found;
+	@FXML 
+	 private MenuItem suguan;
 	
 	@FXML
-	public static HBox navigation;
+	protected void mouse_entered(MouseEvent event) {//1学生 2导员 3宿管 4超管	5测试用户
+
+		
+		if(params.Parems.getUser_grade().equals("0")) {
+			nagivation.setDisable(true);
+			System.out.println(params.Parems.getUser_grade());
+		}
+		if(params.Parems.getUser_grade().equals("1")) {
+			nagivation.setDisable(false);
+			student_apply.setVisible(true);
+			student_found.setVisible(true);
+			
+		}
+		if(params.Parems.getUser_grade().equals("2")) {
+			nagivation.setDisable(false);
+			teacher_reply.setVisible(true);
+			teacher_found.setVisible(true);
+			door.setVisible(true);
+		}
+		if(params.Parems.getUser_grade().equals("3")) {
+			nagivation.setDisable(false);
+			suguan.setVisible(true);
+			door.setVisible(true);
+		}
+		if(params.Parems.getUser_grade().equals("4")) {
+			nagivation.setDisable(false);
+			student_apply.setVisible(true);
+			student_found.setVisible(true);
+			teacher_reply.setVisible(true);
+			teacher_found.setVisible(true);
+			door.setVisible(true);
+			suguan.setVisible(true);
+			door.setVisible(true);
+		}
+
+	}
 	@FXML
 	protected void person_action(ActionEvent event) {
 		if(LoginController.islogged) {

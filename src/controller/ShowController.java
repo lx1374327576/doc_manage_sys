@@ -44,7 +44,9 @@ public class ShowController {
 		}
 		Personal  model = new Personal();
 		model.setUsername(Parems.getUsername());
+		System.out.println(Parems.getUsername());
 		Personal result = new PersonalService().show_info(model);
+		System.out.println(result.getIsroommaster());
 		name.setText(result.getName());
 		male.setText(result.getSex());
 		number.setText(result.getNumber());
@@ -52,9 +54,9 @@ public class ShowController {
 		phone_number.setText(result.getPhone());
 		building.setText(result.getDomitory_building());
 		building_number.setText(result.getDomitory_number());
-		if(result.getIsroommaster().equals("0")) {
+		if(result.getIsroommaster().equals("1")) {
 			is_team.setText("ÊÇ");
-		}else if(result.getIsroommaster().equals("1")) {
+		}else if(result.getIsroommaster().equals("0")) {
 			is_team.setText("·ñ");
 		}
 		flage = true;

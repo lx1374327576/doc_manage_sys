@@ -46,10 +46,7 @@ public class RegisterController {
 		String sex = null;
 		String usertype = null;
 		//点击“确定”跳转初始页面
-		KeyValue kValue=new KeyValue(Main.scrollPane.hvalueProperty(), 0,Interpolator.EASE_OUT);
-		Timeline timeline=new Timeline();
-		timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5), kValue));
-		timeline.play();
+		
 		if(!(password.getText().equals(password_repeat.getText()))) {
 			new PopWindow().alert_informationDialog("注册错误提示!","两次密码不一致!");
 			return;
@@ -82,6 +79,10 @@ public class RegisterController {
 		int result = new RegisterService().confim(register);
 		if(result==1) {
 			//页面跳转
+			KeyValue kValue=new KeyValue(Main.scrollPane.hvalueProperty(), 0,Interpolator.EASE_OUT);
+			Timeline timeline=new Timeline();
+			timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5), kValue));
+			timeline.play();
 		}else {
 			new PopWindow().alert_informationDialog("注册错误提示!","用户名已存在!");
 		}

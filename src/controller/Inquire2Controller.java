@@ -4,7 +4,6 @@ package controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import controller.Reply1Controller.ReplyInformation;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;

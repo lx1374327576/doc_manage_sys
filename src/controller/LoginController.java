@@ -32,9 +32,10 @@ public class LoginController {
 		Login text = new Login();
 		text.setUsername(username_text.getText());
 		text.setPassword(password_text.getText());
-		int islogin = new LoginService().sign_in(text);
-		if (islogin == 1) {
+		Login islogin = new LoginService().sign_in(text);
+		if (islogin.getIsSuccess().equals("1")) {
 			System.out.println("1");
+			Parems.setUser_grade(islogin.getAuth());
 			Parems.setUsername(username_text.getText());
 		}else {
 			System.out.println("0");

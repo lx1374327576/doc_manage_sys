@@ -17,7 +17,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Pane;
+import model.Reply;
+import service.ReplyService;
+import params.Parems;
 
 public class Reply1Controller {
 	
@@ -36,7 +38,6 @@ public class Reply1Controller {
 	private TableView<ReplyInformation> table;
 	private final ObservableList<ReplyInformation> data = FXCollections.observableArrayList();
 	
-	List<Button> btnList = new ArrayList<Button>();
 	
 //	for(int i=0;i<2;i++) {
 //		Button a = new Button();
@@ -48,25 +49,34 @@ public class Reply1Controller {
 		if(flag) {
 			return;
 		}
-		Button a = new Button();
-		a.setText("详情");
-		a.setOnAction(new EventHandler<ActionEvent>(){
+		Reply model = new Reply();
+		model.setUsername(Parems.getUsername());
+		List<Reply> list = new ReplyService().get_info(model);
+		for(int i=0;i<list.size();i++) {
+			Button btn = new Button();
+			btn.setText("详情");
+			String id = list.get(i).getApply_id();
+			btn.setOnAction(new EventHandler<ActionEvent>(){
 
-			@Override
-			public void handle(ActionEvent arg0) {
-				// TODO Auto-generated method stub
-				System.out.println("a");
-			}
-			
-		});
-		btnList.add(a);
-		data.add(new ReplyInformation("a","12","123","1234",a));
-		name.setCellValueFactory(cellData -> cellData.getValue().getName());
-		number.setCellValueFactory(cellData -> cellData.getValue().getNumber());
-		apply_time.setCellValueFactory(cellData -> cellData.getValue().getApply_time());
-		apply_type.setCellValueFactory(cellData -> cellData.getValue().getApply_type());
-		edit.setCellValueFactory(cellData -> cellData.getValue().getEdit());
-		table.setItems(data);
+				@Override
+				public void handle(ActionEvent arg0) {
+					// TODO Auto-generated method stub
+					System.out.println("a");
+					Parems.setReply_id(id);
+					//页面跳转
+				}
+				
+			});
+			data.add(new ReplyInformation(list.get(i).getName(),list.get(i).getDom_number(),list.get(i).getApply_time(),list.get(i).getApply_type(),btn));
+			name.setCellValueFactory(cellData -> cellData.getValue().getName());
+			number.setCellValueFactory(cellData -> cellData.getValue().getNumber());
+			apply_time.setCellValueFactory(cellData -> cellData.getValue().getApply_time());
+			apply_type.setCellValueFactory(cellData -> cellData.getValue().getApply_type());
+			edit.setCellValueFactory(cellData -> cellData.getValue().getEdit());
+			table.setItems(data);
+		}
+		
+		
 		flag = true;
 	}
 

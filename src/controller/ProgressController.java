@@ -1,6 +1,9 @@
 package controller;
 
 
+import java.util.List;
+
+import controller.Inquire1Controller.Information1;
 import frame.Main;
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
@@ -19,6 +22,9 @@ import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
+import model.Inquire;
+import params.Parems;
+import service.InquireService;
 
 public class ProgressController{
 	
@@ -42,10 +48,20 @@ public class ProgressController{
 		if(flag) {
 			return;
 		}
-		data.add(new Information("a","123","b"));
-//		reply_people.setCellValueFactory(cellData -> cellData.getValue().getReply_people());
-//		reply_content.setCellValueFactory(cellData -> cellData.getValue().getReply_content());
-		table.setItems(data);
+		Inquire model = new Inquire();
+		model.setUsername(Parems.getUsername());
+		List<Inquire> list = new InquireService().apply(model);
+		for(int i=0;i<list.size();i++) {
+			String ispass = "通过";
+			if(list.get(i).getIspass().equals("0")) {
+				ispass="不通过";
+			}
+			data.add(new Information(list.get(i).getApply_time(),list.get(i).getApply_type(),ispass));
+			apply_time.setCellValueFactory(cellData -> cellData.getValue().getApply_time());
+			apply_type.setCellValueFactory(cellData -> cellData.getValue().getApply_type());
+			isagree.setCellValueFactory(cellData -> cellData.getValue().getIsagree());
+			table.setItems(data);
+		}
 		flag = true;
 	}
 	

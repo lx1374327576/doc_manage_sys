@@ -3,6 +3,7 @@ package controller;
 
 import java.util.List;
 
+import controller.ProgressController.Information;
 import frame.Main;
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
@@ -23,6 +24,9 @@ import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
+import model.Inquire;
+import params.Parems;
+import service.InquireService;
 
 public class Inquire2Controller{
 	
@@ -50,29 +54,40 @@ public class Inquire2Controller{
 		if(flag) {
 			return;
 		}
-		Button a = new Button();
-		a.setText("œÍ«È");
-		
-		a.setOnAction(new EventHandler<ActionEvent>(){
+		Inquire mode = new Inquire();
+		mode.setUsername(Parems.getUsername());
+		List<Inquire> list = new InquireService().g_student(mode);
+		for(int i=0;i<list.size();i++) {
+			Button btn = new Button();
+			btn.setText("œÍ«È");
+			String id = list.get(i).getStudent_number();
+			btn.setOnAction(new EventHandler<ActionEvent>(){
 
-			@Override
-			public void handle(ActionEvent arg0) {
-				// TODO Auto-generated method stub
-				KeyValue kValue=new KeyValue(Main.scrollPane.hvalueProperty(), 0.8416,Interpolator.EASE_OUT);
-				Timeline timeline=new Timeline();
-				timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5), kValue));
-				timeline.play();
-				System.out.println("a");
+				@Override
+				public void handle(ActionEvent arg0) {
+					// TODO Auto-generated method stub
+					KeyValue kValue=new KeyValue(Main.scrollPane.hvalueProperty(), 0.8416,Interpolator.EASE_OUT);
+					Timeline timeline=new Timeline();
+					timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5), kValue));
+					timeline.play();
+					
+					Parems.setStudent_number(id);
+				}
+				
+			});
+			String a = " «";
+			if(list.get(i).getIs_in_dom().equals("0")) {
+				a = "∑Ò";
 			}
-			
-		});
-		data.add(new Information("a","123","222","2",a));
-		name.setCellValueFactory(cellData -> cellData.getValue().getName());
-		building.setCellValueFactory(cellData -> cellData.getValue().getBuilding());
-		room_number.setCellValueFactory(cellData -> cellData.getValue().getRoom_number());
-		isroom.setCellValueFactory(cellData -> cellData.getValue().getIsroom());
-		edit.setCellValueFactory(cellData -> cellData.getValue().getEdit());
-		table.setItems(data);
+			data.add(new Information(list.get(i).getName(),list.get(i).getBuilding_number(),list.get(i).getDom_number(),a,btn));
+			name.setCellValueFactory(cellData -> cellData.getValue().getName());
+			building.setCellValueFactory(cellData -> cellData.getValue().getBuilding());
+			room_number.setCellValueFactory(cellData -> cellData.getValue().getRoom_number());
+			isroom.setCellValueFactory(cellData -> cellData.getValue().getIsroom());
+			edit.setCellValueFactory(cellData -> cellData.getValue().getEdit());
+			table.setItems(data);
+		}
+		
 		flag = true;
 	}
 	

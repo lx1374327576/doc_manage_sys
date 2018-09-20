@@ -7,8 +7,17 @@ public class Parems {
 	private static String question_id;
 	private static String user_grade="0";
 	private static String reply_id;
+	private static String student_number;
 	
 
+
+	public static String getStudent_number() {
+		return student_number;
+	}
+
+	public static void setStudent_number(String student_number) {
+		Parems.student_number = student_number;
+	}
 
 	public static String getReply_id() {
 		return reply_id;

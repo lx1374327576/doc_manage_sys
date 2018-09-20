@@ -105,10 +105,12 @@ public class LostController{
 		lost.setLandf("0");
 		LostAndFoundService lostService = new LostAndFoundService();
 		List<LostAndFound> list = lostService.my_show(lost);
+		data.clear();
 		for (int i=0;i<list.size();i++) {
 			Button btn = new Button();
 			btn.setText("删除");
 			String id = list.get(i).getLandf_id();
+			int index = i;
 			btn.setOnAction(new EventHandler<ActionEvent>(){
 
 				@Override
@@ -120,6 +122,7 @@ public class LostController{
 					delate.setIsdelete("1");
 					int result = lostService.delete(delate);
 					if(result==1) {
+						data.remove(index);
 						new PopWindow().alert_informationDialog("提示", "操作成功");
 					}else if(result==0) {
 						new PopWindow().alert_informationDialog("提示", "操作失败");

@@ -12,7 +12,7 @@ public class LostAndFoundTest {
 		LostAndFoundService lostAndFoundService=new LostAndFoundService();
 		lostAndFound.setUsername("admin");
 		lostAndFound.setLandf_id("05");
-		lostAndFound.setLandf("0");
+		lostAndFound.setLandf("1");
 		List<LostAndFound> list=new ArrayList();
 		list=lostAndFoundService.show(lostAndFound);
 		System.out.println(list.size());

@@ -28,6 +28,7 @@ public class LostAndFoundDao extends BaseDao {
 			List list2=new ArrayList();
 			executeQuery("select name,dormitory_number from student where user_name=?",
 					map.get("username"));
+			System.out.println(map.get("username"));
 			list2=convertList(rs);
 			Map<String,String> map2 = (Map) list2.get(0);
 			tmp.setName(map2.get("name"));

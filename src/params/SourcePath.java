@@ -35,25 +35,25 @@ public class SourcePath {
 		
 		allList.add(Login);	
 		
-		allList.add(Register);
-		allList.add(Apply);
-		allList.add(Reply1);
-		allList.add(Reply2);
-		allList.add(QuestionAndAnswer);
-		allList.add(Answer);
-		allList.add(Question);
-		allList.add(Ask);
-		allList.add(Lost);
-		allList.add(Found);
-		allList.add(Show);
-		allList.add(Inquire1);
-		allList.add(Progress);
-		allList.add(Inquire3);
-		allList.add(Inquire2);
-		allList.add(Guard);
-		allList.add(HomePage);
-		allList.add(Contact);
-		allList.add(Personal);
+		allList.add(Register);//1
+		allList.add(Apply);//2
+		allList.add(Reply1);//3
+		allList.add(Reply2);//4
+		allList.add(QuestionAndAnswer);//5
+		allList.add(Answer);//6
+		allList.add(Question);//7
+		allList.add(Ask);//8
+		allList.add(Lost);//9
+		allList.add(Found);//10
+		allList.add(Show);//11
+		allList.add(Inquire1);//12
+		allList.add(Progress);//13
+		allList.add(Inquire3);//14
+		allList.add(Inquire2);//15
+		allList.add(Guard);//16
+		allList.add(HomePage);//17
+		allList.add(Contact);//18
+		allList.add(Personal);//19
 		
 		
 		return allList;

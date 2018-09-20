@@ -2,11 +2,17 @@ package controller;
 
 
 
+import frame.Main;
+import javafx.animation.Interpolator;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.util.Duration;
 import model.Personal;
 import params.Parems;
 import service.PersonalService;
@@ -35,6 +41,10 @@ public class ShowController {
 	@FXML
 	protected void  change_action(ActionEvent event){
 		//Ò³ÃæÌø×ª
+		KeyValue kValue=new KeyValue(Main.scrollPane.hvalueProperty(), 1,Interpolator.EASE_OUT);
+		Timeline timeline=new Timeline();
+		timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5), kValue));
+		timeline.play();
 	}
 	
 	@FXML

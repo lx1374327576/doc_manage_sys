@@ -66,7 +66,7 @@ public class Main extends Application{
 			scrollPane.setVbarPolicy(ScrollBarPolicy.NEVER);
 			scrollPane.setVmax(0.0);
 			scrollPane.setVmin(0.0);
-//			scrollPane.setHbarPolicy(ScrollBarPolicy.NEVER);
+			scrollPane.setHbarPolicy(ScrollBarPolicy.NEVER);
 			scrollPane.setContent(main_pane);
 			scrollPane.setVvalue(1);
 //			scrollPane.setDisable(true);

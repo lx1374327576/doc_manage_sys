@@ -40,7 +40,7 @@ public class ApplyDao extends BaseDao {
 		result+=1;
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		System.out.println(df.format(new Date()));
-		executeUpdate("insert into apply values(?,?,'6',?,'-1',null,null,null,?,null,null,?)",
+		executeUpdate("insert into apply values(?,?,'3',?,'-1',null,null,null,?,null,null,?)",
 				result,apply.getUsername(),df.format(new Date()),
 				apply.getDom_number(),apply.getInfo());
 		closeAll();
@@ -53,7 +53,7 @@ public class ApplyDao extends BaseDao {
 		result+=1;
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		System.out.println(df.format(new Date()));
-		executeUpdate("insert into apply values(?,?,'5',?,'-1',null,null,null,?,null,?,?)",
+		executeUpdate("insert into apply values(?,?,'4',?,'-1',null,null,null,?,null,?,?)",
 				result,apply.getUsername(),df.format(new Date()),
 				apply.getDom_number(),apply.getNew_dom_number(),apply.getInfo());
 		closeAll();
@@ -66,7 +66,7 @@ public class ApplyDao extends BaseDao {
 		result+=1;
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		System.out.println(df.format(new Date()));
-		executeUpdate("insert into apply values(?,?,'3',?,'-1',null,null,null,?,?,null,?)",
+		executeUpdate("insert into apply values(?,?,'5',?,'-1',null,null,null,?,?,null,?)",
 				result,apply.getUsername(),df.format(new Date()),
 				apply.getDom_number(),apply.getLeave_time(),apply.getInfo());
 		closeAll();

@@ -39,10 +39,6 @@ public class Inquire2Controller{
 	@FXML
 	private TableColumn<Information, String> isroom;
 	@FXML
-	private TableColumn<Information, String> student_unnormal;
-	@FXML
-	private TableColumn<Information, String> leave_type;
-	@FXML
 	private TableColumn<Information, Button> edit;
 	@FXML
 	private TableView<Information> table;
@@ -73,13 +69,11 @@ public class Inquire2Controller{
 			
 		});
 		btnList.add(a);
-		data.add(new Information("a","123","222","222","22","2",a));
+		data.add(new Information("a","123","222","2",a));
 		name.setCellValueFactory(cellData -> cellData.getValue().getName());
 		building.setCellValueFactory(cellData -> cellData.getValue().getBuilding());
 		room_number.setCellValueFactory(cellData -> cellData.getValue().getRoom_number());
 		isroom.setCellValueFactory(cellData -> cellData.getValue().getIsroom());
-		student_unnormal.setCellValueFactory(cellData -> cellData.getValue().getStudent_unnormal());
-		leave_type.setCellValueFactory(cellData -> cellData.getValue().getStudent_unnormal());
 		edit.setCellValueFactory(cellData -> cellData.getValue().getEdit());
 		table.setItems(data);
 		flag = true;
@@ -92,27 +86,20 @@ public class Inquire2Controller{
 		private final StringProperty building;
 		private final StringProperty room_number;
 		private final StringProperty isroom;
-		private final StringProperty student_unnormal;
-		private final StringProperty leave_type;
 		private final ObjectProperty<Button> edit;
 		
 		public Information() {
-			this(null,null,null,null,null,null,null);
+			this(null,null,null,null,null);
 		}
 		
-		public Information(String name,String building,String room_number,String isroom,String student_unnormal,String leave_type,Button edit) {
+		public Information(String name,String building,String room_number,String isroom,Button edit) {
 			this.name = new SimpleStringProperty(name);	
 			this.building = new SimpleStringProperty(building);
 			this.room_number = new SimpleStringProperty(room_number);	
 			this.isroom = new SimpleStringProperty(isroom);
-			this.student_unnormal = new SimpleStringProperty(student_unnormal);	
-			this.leave_type = new SimpleStringProperty(leave_type);	
 			this.edit = new SimpleObjectProperty<Button>(edit);
 		}
 
-		public StringProperty getLeave_type() {
-			return leave_type;
-		}
 
 		public StringProperty getName() {
 			return name;
@@ -130,9 +117,6 @@ public class Inquire2Controller{
 			return isroom;
 		}
 
-		public StringProperty getStudent_unnormal() {
-			return student_unnormal;
-		}
 
 		public ObjectProperty<Button> getEdit() {
 			return edit;

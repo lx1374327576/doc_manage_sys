@@ -17,9 +17,9 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <Pane id="header_stage" prefHeight="56.0" prefWidth="886.0" GridPane.rowIndex="1">
+      <Pane id="header_stage" onMouseEntered="#mouse_entered" prefHeight="56.0" prefWidth="886.0" GridPane.rowIndex="1">
          <children>
-            <HBox fx:id="navigation" layoutX="100.0" layoutY="3.0" prefHeight="50.0" prefWidth="625.0">
+            <HBox fx:id="nagivation" layoutX="100.0" layoutY="3.0" prefHeight="50.0" prefWidth="625.0">
                <children>
                   <MenuButton id="personal" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="个人信息" textFill="WHITE">
                      <font>
@@ -34,8 +34,8 @@
                   </MenuButton>
                   <MenuButton id="apply" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="申请" textFill="WHITE">
                     <items>
-                      <MenuItem mnemonicParsing="false" onAction="#stuApply_action" text="学生申请" />
-                      <MenuItem mnemonicParsing="false" onAction="#teachApply_action" text="导员批复" />
+                      <MenuItem fx:id="student_apply" mnemonicParsing="false" onAction="#stuApply_action" text="学生申请" visible="false" />
+                      <MenuItem fx:id="teacher_reply" mnemonicParsing="false" onAction="#teachApply_action" text="导员批复" visible="false" />
                     </items>
                      <HBox.margin>
                         <Insets top="5.0" />
@@ -60,10 +60,10 @@
                   </MenuButton>
                   <MenuButton id="inquire" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="查询" textFill="WHITE">
                     <items>
-                      <MenuItem mnemonicParsing="false" onAction="#student_action" text="学生查询" />
-                        <MenuItem mnemonicParsing="false" onAction="#door_action" text="门禁信息" />
-                        <MenuItem mnemonicParsing="false" onAction="#dormitory_action" text="宿管查询" />
-                        <MenuItem mnemonicParsing="false" onAction="#teacher_action" text="导员查询" />
+                      <MenuItem fx:id="student_found" mnemonicParsing="false" onAction="#student_action" text="学生查询" visible="false" />
+                        <MenuItem fx:id="door" mnemonicParsing="false" onAction="#door_action" text="门禁信息" visible="false" />
+                        <MenuItem fx:id="suguan" mnemonicParsing="false" onAction="#dormitory_action" text="宿管查询" visible="false" />
+                        <MenuItem fx:id="teacher_found" mnemonicParsing="false" onAction="#teacher_action" text="导员查询" visible="false" />
                     </items>
                      <HBox.margin>
                         <Insets top="5.0" />

@@ -1,6 +1,11 @@
 package controller;
 
 import controller.QuestionController.Information;
+import frame.Main;
+import javafx.animation.Interpolator;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
@@ -13,6 +18,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.util.Duration;
 
 public class Inquire1Controller {
 	private boolean flag = false;
@@ -59,7 +65,10 @@ public class Inquire1Controller {
 	
 	@FXML
 	protected void myapply_action(ActionEvent event) {
-		
+		KeyValue kValue=new KeyValue(Main.scrollPane.hvalueProperty(),0.6838,Interpolator.EASE_OUT);
+		Timeline timeline=new Timeline();
+		timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5), kValue));
+		timeline.play();
 	}
 	
 

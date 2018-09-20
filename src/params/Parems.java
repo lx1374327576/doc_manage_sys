@@ -5,7 +5,7 @@ package params;
 public class Parems {
 	private static String username;
 	private static String question_id;
-	private static String user_grade;
+	private static String user_grade="0";
 	private static String reply_id;
 	
 

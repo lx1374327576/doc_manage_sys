@@ -185,6 +185,7 @@ public class Reply2Controller {
 			new_number_name.setVisible(true);
 			
 			number.setText(list.get(0).getDom_number());
+			new_number.setText(list.get(0).getNew_dom_number());
 		}else if(type.equals("±¨ÐÞ")) {
 			leave.setVisible(false);
 			leave_time.setVisible(false);

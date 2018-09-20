@@ -8,9 +8,7 @@ public class SourcePath {
 	public static List<String> url(){
 		List<String> allList = new ArrayList<String>();
 		
-		String HomePage = "../source/HomePage.fxml";
-		String Contact = "../source/Contact.fxml";
-		String Personal = "../source/Personal.fxml";
+		
 		String Register = "../source/Register.fxml";
 		String Login = "../source/Login.fxml";
 		String Apply = "../source/Apply.fxml";
@@ -28,14 +26,15 @@ public class SourcePath {
 		String Inquire3 = "../source/Inquire3.fxml";
 		String Inquire2 = "../source/Inquire2.fxml";
 		String Guard = "../source/Guard.fxml";
+		String HomePage = "../source/HomePage.fxml";
+		String Contact = "../source/Contact.fxml";
+		String Personal = "../source/Personal.fxml";
 		
 		
 		
-		allList.add(HomePage);
-		allList.add(Contact);
-		allList.add(Personal);
-		allList.add(Register);
+		
 		allList.add(Login);	
+		allList.add(Register);
 		allList.add(Apply);
 		allList.add(Reply1);
 		allList.add(Reply2);
@@ -51,7 +50,9 @@ public class SourcePath {
 		allList.add(Inquire3);
 		allList.add(Inquire2);
 		allList.add(Guard);
-		
+		allList.add(HomePage);
+		allList.add(Contact);
+		allList.add(Personal);
 		
 		
 		return allList;

@@ -13,7 +13,14 @@ public class Reply extends BaseObject {
 	private String apply_id;//标记或传输用
 	private String info;//情况说明ps 
 	private String state;//问题状态
+	private String new_dom_number;//新宿舍
 	
+	public String getNew_dom_number() {
+		return new_dom_number;
+	}
+	public void setNew_dom_number(String new_dom_number) {
+		this.new_dom_number = new_dom_number;
+	}
 	public String getState() {
 		return state;
 	}

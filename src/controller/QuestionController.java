@@ -8,9 +8,7 @@ import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -55,23 +53,27 @@ public class QuestionController{
 		List<QuestionAndAnswer> list = new QuestionAndAnswerService().get_other_reply(model);
 		for(int i=0;i<list.size();i++) {
 			
-			data.add(new Information("a","123"));
+			data.add(new Information(list.get(i).getOut_person(),list.get(i).getOut_question()));
 			reply_people.setCellValueFactory(cellData -> cellData.getValue().getReply_people());
 			reply_content.setCellValueFactory(cellData -> cellData.getValue().getReply_content());
 			table.setItems(data);
 		}
+		List<QuestionAndAnswer> list1 = new QuestionAndAnswerService().get_third(model);
+//		publish_people.setText(list1.get(0).getOut_person());
+//		question_text.setText(list1.get(0).getOut_question());
+//		detail_text.setText(list1.get(0).getOut_info());
 		
 		flag = true;
 	}
 	
 	@FXML
 	protected void back_action(ActionEvent event) {
-		
+		//页面跳转
 	}
 	
 	@FXML
 	protected void answer_action(ActionEvent event) {
-		
+		//页面跳转
 	}
 
 	

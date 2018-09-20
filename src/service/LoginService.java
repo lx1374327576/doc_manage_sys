@@ -7,10 +7,11 @@ public class LoginService extends BaseService{
 	
 	LoginDao loginDao=new LoginDao();
 	
-	public int sign_in(Login login) {
-		int result=0;
-		result=loginDao.sign_in(login);
-		return result;
+	public Login sign_in(Login login) {
+		int result=-1;
+		Login tmp=new Login();
+		tmp=loginDao.sign_in(login);
+		return tmp;
 	}
 	
 	public void sign_up(Login login) {

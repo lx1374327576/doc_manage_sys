@@ -49,6 +49,10 @@ public class LoginController {
 			Parems.setUser_grade(islogin.getAuth());
 			Parems.setUsername(username_text.getText());
 			
+			//登录 和密码 输入框 清空
+			username_text.clear();
+			password_text.clear();
+			
 		}else {
 			System.out.println("0");
 			new PopWindow().alert_informationDialog("用户登录错误提示!","用户名或密码不正确!");

@@ -58,33 +58,34 @@ public class Reply1Controller {
 		}
 		Reply model = new Reply();
 		model.setUsername(Parems.getUsername());
-		List<Reply> list = new ReplyService().get_info(model);
-		for(int i=0;i<list.size();i++) {
-			Button btn = new Button();
-			btn.setText("ÏêÇé");
-			String id = list.get(i).getApply_id();
-			btn.setOnAction(new EventHandler<ActionEvent>(){
-
-				@Override
-				public void handle(ActionEvent arg0) {
-					// TODO Auto-generated method stub
-					KeyValue kValue=new KeyValue(Main.scrollPane.hvalueProperty(), 0.210,Interpolator.EASE_OUT);
-					Timeline timeline=new Timeline();
-					timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5), kValue));
-					timeline.play();
-					System.out.println("a");
-					Parems.setReply_id(id);
-				}
-			
-			});
-			data.add(new ReplyInformation(list.get(i).getName(),list.get(i).getDom_number(),list.get(i).getApply_time(),list.get(i).getApply_type(),btn));
-			name.setCellValueFactory(cellData -> cellData.getValue().getName());
-			number.setCellValueFactory(cellData -> cellData.getValue().getNumber());
-			apply_time.setCellValueFactory(cellData -> cellData.getValue().getApply_time());
-			apply_type.setCellValueFactory(cellData -> cellData.getValue().getApply_type());
-			edit.setCellValueFactory(cellData -> cellData.getValue().getEdit());
-			table.setItems(data);
-		}
+		System.out.println(Parems.getUsername());
+//		List<Reply> list = new ReplyService().get_info(model);
+//		for(int i=0;i<list.size();i++) {
+//			Button btn = new Button();
+//			btn.setText("ÏêÇé");
+//			String id = list.get(i).getApply_id();
+//			btn.setOnAction(new EventHandler<ActionEvent>(){
+//
+//				@Override
+//				public void handle(ActionEvent arg0) {
+//					// TODO Auto-generated method stub
+//					KeyValue kValue=new KeyValue(Main.scrollPane.hvalueProperty(), 0.210,Interpolator.EASE_OUT);
+//					Timeline timeline=new Timeline();
+//					timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5), kValue));
+//					timeline.play();
+//					System.out.println("a");
+//					Parems.setReply_id(id);
+//				}
+//			
+//			});
+//			data.add(new ReplyInformation(list.get(i).getName(),list.get(i).getDom_number(),list.get(i).getApply_time(),list.get(i).getApply_type(),btn));
+//			name.setCellValueFactory(cellData -> cellData.getValue().getName());
+//			number.setCellValueFactory(cellData -> cellData.getValue().getNumber());
+//			apply_time.setCellValueFactory(cellData -> cellData.getValue().getApply_time());
+//			apply_type.setCellValueFactory(cellData -> cellData.getValue().getApply_type());
+//			edit.setCellValueFactory(cellData -> cellData.getValue().getEdit());
+//			table.setItems(data);
+//		}
 		
 		flag = true;
 	}

@@ -1,7 +1,6 @@
 package controller;
 
 
-import java.util.ArrayList;
 import java.util.List;
 
 import frame.Main;
@@ -45,7 +44,6 @@ public class Inquire2Controller{
 	private final ObservableList<Information> data = FXCollections.observableArrayList();
 	
 	
-	List<Button> btnList = new ArrayList<Button>();
 	
 	@FXML
 	protected void add_data_action(MouseEvent event) {
@@ -68,7 +66,6 @@ public class Inquire2Controller{
 			}
 			
 		});
-		btnList.add(a);
 		data.add(new Information("a","123","222","2",a));
 		name.setCellValueFactory(cellData -> cellData.getValue().getName());
 		building.setCellValueFactory(cellData -> cellData.getValue().getBuilding());

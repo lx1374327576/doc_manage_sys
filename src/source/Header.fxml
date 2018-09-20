@@ -21,7 +21,7 @@
          <children>
             <HBox layoutX="100.0" layoutY="3.0" prefHeight="50.0" prefWidth="625.0">
                <children>
-                  <MenuButton id="personal" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="个人信息">
+                  <MenuButton id="personal" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="个人信息" textFill="WHITE">
                      <font>
                         <Font name="Microsoft YaHei" size="15.0" />
                      </font>
@@ -32,7 +32,7 @@
                         <MenuItem mnemonicParsing="false" text="个人信息" />
                      </items>
                   </MenuButton>
-                  <MenuButton id="apply" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="申请">
+                  <MenuButton id="apply" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="申请" textFill="WHITE">
                     <items>
                       <MenuItem mnemonicParsing="false" onAction="#stuApply_action" text="学生申请" />
                       <MenuItem mnemonicParsing="false" onAction="#teachApply_action" text="导员批复" />
@@ -41,7 +41,7 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </MenuButton>
-                  <MenuButton id="question" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="询问">
+                  <MenuButton id="question" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="询问" textFill="WHITE">
                     <items>
                       <MenuItem mnemonicParsing="false" text="询问" />
                     </items>
@@ -49,7 +49,7 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </MenuButton>
-                  <MenuButton id="lost" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="失物招领">
+                  <MenuButton id="lost" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="失物招领" textFill="WHITE">
                     <items>
                       <MenuItem mnemonicParsing="false" text="拾物" />
                       <MenuItem mnemonicParsing="false" text="寻物" />
@@ -58,7 +58,7 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </MenuButton>
-                  <MenuButton id="inquiry" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="查询">
+                  <MenuButton id="inquire" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="查询" textFill="WHITE">
                     <items>
                       <MenuItem mnemonicParsing="false" text="空闲宿舍" />
                       <MenuItem mnemonicParsing="false" text="舍友信息" />
@@ -73,7 +73,7 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </MenuButton>
-                  <MenuButton id="touch" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="联系我们">
+                  <MenuButton id="touch" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="联系我们" textFill="WHITE">
                     <items>
                       <MenuItem mnemonicParsing="false" text="联系我们" />
                     </items>
@@ -83,14 +83,9 @@
                   </MenuButton>
                </children>
             </HBox>
-            <HBox alignment="CENTER" layoutX="736.0" prefHeight="25.0" prefWidth="150.0">
+            <HBox alignment="CENTER" layoutX="736.0" layoutY="8.0" prefHeight="40.0" prefWidth="150.0">
                <children>
-                  <Label prefHeight="25.0" prefWidth="100.0" text="欢迎：啊啊啊" />
-               </children>
-            </HBox>
-            <HBox alignment="CENTER" layoutX="736.0" layoutY="25.0" prefHeight="25.0" prefWidth="150.0">
-               <children>
-                  <Button id="logout" mnemonicParsing="false" prefHeight="25.0" text="注销" />
+                  <Button id="logout" mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" text="注销" textFill="WHITE" />
                </children></HBox>
             <Pane id="logo" layoutX="14.0" layoutY="3.0" prefHeight="50.0" prefWidth="50.0" />
          </children>

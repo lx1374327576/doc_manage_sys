@@ -2,11 +2,17 @@ package controller;
 
 
 
+import frame.Main;
+import javafx.animation.Interpolator;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.util.Duration;
 import pop.PopWindow;
 import model.Personal;
 import service.PersonalService;
@@ -53,6 +59,11 @@ public class PersonalController {
 			}else if(result==1) {
 				new PopWindow().alert_informationDialog("提示!","修改成功!");
 				//页面跳转 
+				
+				KeyValue kValue=new KeyValue(Main.scrollPane.hvalueProperty(), 0.5786,Interpolator.EASE_OUT);
+				Timeline timeline=new Timeline();
+				timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5), kValue));
+				timeline.play();
 			}else {
 				new PopWindow().alert_informationDialog("错误提示!","未知错误!");
 			}

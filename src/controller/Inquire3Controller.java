@@ -63,7 +63,7 @@ public class Inquire3Controller {
 			return;
 		}
 		CheckBox a = new CheckBox();
-		a.setText("ฯ๊ว้");
+		
 		a.setOnAction(new EventHandler<ActionEvent>(){
 
 			@Override

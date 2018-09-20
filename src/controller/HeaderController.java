@@ -55,7 +55,6 @@ public class HeaderController {
 		if(params.Parems.getUser_grade().equals("3")) {
 			nagivation.setDisable(false);
 			suguan.setVisible(true);
-			door.setVisible(true);
 		}
 		if(params.Parems.getUser_grade().equals("4")) {
 			nagivation.setDisable(false);

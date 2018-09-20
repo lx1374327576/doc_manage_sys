@@ -98,11 +98,9 @@ public class QuestionController{
 		private final StringProperty reply_people;
 		private final StringProperty reply_content;
 		
-		public Information() {
-			this(null,null);
-		}
 		
 		public Information(String reply_people,String reply_content) {
+			super();
 			this.reply_people = new SimpleStringProperty(reply_people);	
 			this.reply_content = new SimpleStringProperty(reply_content);	
 		}

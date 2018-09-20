@@ -104,11 +104,9 @@ public class Reply1Controller {
 		private final StringProperty apply_type;
 		private final ObjectProperty<Button> edit;
 		
-		public ReplyInformation() {
-			this(null,null,null,null,null);
-		}
 		
 		public ReplyInformation(String name,String number,String apply_time,String apply_type,Button edit) {
+			super();
 			this.name = new SimpleStringProperty(name);	
 			this.number = new SimpleStringProperty(number);	
 			this.apply_time = new SimpleStringProperty(apply_time);	

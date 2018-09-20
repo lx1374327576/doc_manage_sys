@@ -1,0 +1,20 @@
+1.在数据库里加一列 alter table  --- add ---- varchar(50)
+2.在对应的model里加一个属性和set/get方法
+source --> genreate set and get
+3.在对应的dao里加一个set方法
+tmp.set(对应的数据库列名)
+fxml 增加相应的列  记得加fx:id
+
+在对应的controller里面加下面的
+@FXML
+private TableColumn<ReplyInformation, String> 你的列名 ;
+
+private final StringProperty 你的列名;
+
+public public ReplyInformation  初始化
+
+source --> genreate set and get
+
+data.add 初始化方法里面加 你的get方法
+
+edit.setCellValueFactory(cellData -> cellData.getValue().getEdit());

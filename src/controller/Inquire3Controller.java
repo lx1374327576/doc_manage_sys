@@ -34,8 +34,6 @@ public class Inquire3Controller {
 	@FXML
 	private TableColumn<Information1, String> isroom;
 	@FXML
-	private TableColumn<Information1, String> leave_type;
-	@FXML
 	private TableView<Information1> table1;
 	private final ObservableList<Information1> data1 = FXCollections.observableArrayList();
 	
@@ -86,11 +84,10 @@ public class Inquire3Controller {
 		
 		
 		
-		data1.add(new Information1("a","12","123","1234"));
+		data1.add(new Information1("a","12","123"));
 		name.setCellValueFactory(cellData -> cellData.getValue().getName());
 		room_number.setCellValueFactory(cellData -> cellData.getValue().getRoom_number());
 		isroom.setCellValueFactory(cellData -> cellData.getValue().getIsroom());
-		leave_type.setCellValueFactory(cellData -> cellData.getValue().getLeave_type());
 		table1.setItems(data1);
 		flag = true;
 	}
@@ -103,17 +100,15 @@ public class Inquire3Controller {
 		private final StringProperty name;
 		private final StringProperty room_number;
 		private final StringProperty isroom;
-		private final StringProperty leave_type;
 		
 		public Information1() {
-			this(null,null,null,null);
+			this(null,null,null);
 		}
 		
-		public Information1(String name,String room_number,String isroom,String leave_type) {
+		public Information1(String name,String room_number,String isroom) {
 			this.name = new SimpleStringProperty(name);	
 			this.room_number = new SimpleStringProperty(room_number);	
 			this.isroom = new SimpleStringProperty(isroom);	
-			this.leave_type = new SimpleStringProperty(leave_type);	
 			
 		}
 
@@ -129,9 +124,6 @@ public class Inquire3Controller {
 			return isroom;
 		}
 
-		public StringProperty getLeave_type() {
-			return leave_type;
-		}
 		
 		
 		

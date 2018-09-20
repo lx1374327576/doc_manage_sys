@@ -9,12 +9,11 @@
 
 <Pane id="inquire3_stage" fx:id="inquire3_stage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#add_data_action" prefHeight="442.0" prefWidth="886.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Inquire3Controller">
    <children>
-      <TableView fx:id="table1" layoutX="50.0" layoutY="120.0" prefHeight="200.0" prefWidth="327.0">
+      <TableView fx:id="table1" layoutX="50.0" layoutY="120.0" prefHeight="200.0" prefWidth="270.0">
         <columns>
           <TableColumn fx:id="name" prefWidth="75.0" text="姓名" />
-            <TableColumn fx:id="room_number" prefWidth="75.0" text="宿舍号" />
-            <TableColumn fx:id="isroom" prefWidth="85.0" text="是否在宿舍" />
-            <TableColumn fx:id="leave_type" prefWidth="91.0" text="请假类型" />
+            <TableColumn fx:id="room_number" prefWidth="109.0" text="宿舍号" />
+            <TableColumn fx:id="isroom" prefWidth="84.0" text="是否在宿舍" />
         </columns>
       </TableView>
       <TableView fx:id="table2" layoutX="430.0" layoutY="120.0" prefHeight="200.0" prefWidth="380.0">

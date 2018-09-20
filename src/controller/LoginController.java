@@ -17,6 +17,7 @@ import pop.PopWindow;
 import params.Parems;
 
 public class LoginController {
+	public static boolean islogged=false;
 	@FXML
 	private Button sign_in;
 	@FXML
@@ -26,18 +27,24 @@ public class LoginController {
 	@FXML
 	private PasswordField password_text;
 	
+	
 	@FXML
 	protected void sign_in_action(ActionEvent event) {
 		System.out.println("a");
 		Login text = new Login();
 		text.setUsername(username_text.getText());
 		text.setPassword(password_text.getText());
-		KeyValue kValue=new KeyValue(Main.scrollPane.hvalueProperty(),0.8942,Interpolator.EASE_OUT);
-		Timeline timeline=new Timeline();
-		timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5), kValue));
-		timeline.play();
+		
 		Login islogin = new LoginService().sign_in(text);
-		if (islogin.getIsSuccess().equals("1")) {
+		if (islogin.getIsSuccess().equals("1")) {//成功登陆
+			//出现导航栏
+			islogged=true;
+			KeyValue kValue=new KeyValue(Main.scrollPane.hvalueProperty(),0.8942,Interpolator.EASE_OUT);
+			Timeline timeline=new Timeline();
+			timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5), kValue));
+			timeline.play();
+			
+			
 			System.out.println("1");
 			Parems.setUser_grade(islogin.getAuth());
 			Parems.setUsername(username_text.getText());

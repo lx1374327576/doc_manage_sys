@@ -193,6 +193,14 @@ public class HeaderController {
 			Timeline timeline=new Timeline();
 			timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5), kValue));
 			timeline.play();
+			params.Parems.setUser_grade("0");
 		}
+		student_apply.setVisible(false);
+		student_found.setVisible(false);
+		teacher_found.setVisible(false);
+		teacher_reply.setVisible(false);
+		door.setVisible(false);
+		suguan.setVisible(false);
+		nagivation.setDisable(false);
 	}
 }

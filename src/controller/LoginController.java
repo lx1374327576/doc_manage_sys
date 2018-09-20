@@ -32,15 +32,16 @@ public class LoginController {
 		Login text = new Login();
 		text.setUsername(username_text.getText());
 		text.setPassword(password_text.getText());
+		KeyValue kValue=new KeyValue(Main.scrollPane.hvalueProperty(),0.8942,Interpolator.EASE_OUT);
+		Timeline timeline=new Timeline();
+		timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5), kValue));
+		timeline.play();
 		Login islogin = new LoginService().sign_in(text);
 		if (islogin.getIsSuccess().equals("1")) {
 			System.out.println("1");
 			Parems.setUser_grade(islogin.getAuth());
 			Parems.setUsername(username_text.getText());
-			KeyValue kValue=new KeyValue(Main.scrollPane.hvalueProperty(),0.8942,Interpolator.EASE_OUT);
-			Timeline timeline=new Timeline();
-			timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5), kValue));
-			timeline.play();
+			
 		}else {
 			System.out.println("0");
 			new PopWindow().alert_informationDialog("用户登录错误提示!","用户名或密码不正确!");

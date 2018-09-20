@@ -3,6 +3,11 @@ package controller;
 
 import java.util.List;
 
+import frame.Main;
+import javafx.animation.Interpolator;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -17,6 +22,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.util.Duration;
 import model.QuestionAndAnswer;
 import service.QuestionAndAnswerService;
 import params.Parems;
@@ -62,6 +68,10 @@ public class QuestionAndAnswerController {
 				@Override
 				public void handle(ActionEvent arg0) {
 					// TODO Auto-generated method stub
+					KeyValue kValue=new KeyValue(Main.scrollPane.hvalueProperty(), 0.3682,Interpolator.EASE_OUT);
+					Timeline timeline=new Timeline();
+					timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5), kValue));
+					timeline.play();
 					Parems.setQuestion_id(id);
 //					System.out.println(a);
 					//页面跳转
@@ -84,6 +94,10 @@ public class QuestionAndAnswerController {
 	@FXML
 	protected void ask_action(ActionEvent event) {
 		//页面跳转
+		KeyValue kValue=new KeyValue(Main.scrollPane.hvalueProperty(), 0.4208,Interpolator.EASE_OUT);
+		Timeline timeline=new Timeline();
+		timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5), kValue));
+		timeline.play();
 	}
 	
 	@FXML

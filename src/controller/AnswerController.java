@@ -3,12 +3,18 @@ package controller;
 
 import java.util.List;
 
+import frame.Main;
+import javafx.animation.Interpolator;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.util.Duration;
 import model.QuestionAndAnswer;
 import service.QuestionAndAnswerService;
 import params.Parems;
@@ -43,6 +49,10 @@ public class AnswerController {
 	@FXML
 	protected void back_action(ActionEvent event) {
 		//Ò³ÃæÌø×ª
+		KeyValue kValue=new KeyValue(Main.scrollPane.hvalueProperty(), 0.263,Interpolator.EASE_OUT);
+		Timeline timeline=new Timeline();
+		timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5), kValue));
+		timeline.play();
 	}
 	
 	@FXML
@@ -52,7 +62,12 @@ public class AnswerController {
 		model.setIn_question_id(Parems.getQuestion_id());
 		model.setIn_info(my_answer.getText());
 		new QuestionAndAnswerService().submit_reply(model);
+		
 		my_answer.clear();
+		KeyValue kValue=new KeyValue(Main.scrollPane.hvalueProperty(), 0.316,Interpolator.EASE_OUT);
+		Timeline timeline=new Timeline();
+		timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5), kValue));
+		timeline.play();
 	}
 
 	

@@ -15,6 +15,7 @@ import javafx.util.Duration;
 import model.Register;
 import service.RegisterService;
 import pop.PopWindow;
+import exam.Check;
 
 public class RegisterController {
 	@FXML
@@ -31,6 +32,7 @@ public class RegisterController {
 	private TextField male;
 	@FXML
 	private TextField type;
+	Check check=new Check();
 	
 	@FXML
 	protected void  comeback_action(ActionEvent event){
@@ -49,6 +51,10 @@ public class RegisterController {
 		
 		if(!(password.getText().equals(password_repeat.getText()))) {
 			new PopWindow().alert_informationDialog("注册错误提示!","两次密码不一致!");
+			return;
+		}
+		if (check.password(password.getText())==0){
+			new PopWindow().alert_informationDialog("注册错误提示!","密码不符合要求");
 			return;
 		}
 		if(male.getText().equals("男")) {

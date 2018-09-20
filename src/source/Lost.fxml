@@ -24,7 +24,7 @@
           <TableColumn fx:id="lost_thing" prefWidth="167.1999969482422" text="挂失物" />
             <TableColumn fx:id="room_number" prefWidth="56.79998779296875" text="宿舍号" />
             <TableColumn fx:id="connect_number" prefWidth="168.79998779296875" text="联系方式" />
-            <TableColumn fx:id="delate" prefWidth="53.60003662109375" />
+		<TableColumn fx:id="delate" prefWidth="53.60003662109375" />
         </columns>
       </TableView>
       <Button fx:id="my_lost_thing" layoutX="465.0" layoutY="315.0" mnemonicParsing="false" onAction="#choice_action" prefHeight="30.0" prefWidth="100.0" text="我的失物">

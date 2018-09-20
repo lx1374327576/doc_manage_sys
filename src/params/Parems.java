@@ -9,8 +9,18 @@ public class Parems {
 	private static String reply_id;
 	private static String student_number;
 	private static boolean flagall = false;
+	private static boolean flagReply = false;
+	private static int row;
 	
 
+
+	public static boolean isFlagReply() {
+		return flagReply;
+	}
+
+	public static void setFlagReply(boolean flagReply) {
+		Parems.flagReply = flagReply;
+	}
 
 	public static boolean isFlagall() {
 		return flagall;
@@ -58,6 +68,14 @@ public class Parems {
 
 	public static void setUsername(String username) {
 		Parems.username = username;
+	}
+
+	public static int getRow() {
+		return row;
+	}
+
+	public static void setRow(int row) {
+		Parems.row = row;
 	}
 	
 	

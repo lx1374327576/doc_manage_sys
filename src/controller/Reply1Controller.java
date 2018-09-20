@@ -64,6 +64,7 @@ public class Reply1Controller {
 			Button btn = new Button();
 			btn.setText("ฯ๊ว้");
 			String id = list.get(i).getApply_id();
+			int j=i;
 			btn.setOnAction(new EventHandler<ActionEvent>(){
 
 				@Override
@@ -74,7 +75,9 @@ public class Reply1Controller {
 					timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5), kValue));
 					timeline.play();
 					System.out.println("a");
+					Parems.setRow(j);
 					Parems.setReply_id(id);
+					Parems.setFlagReply(false);
 				}
 			
 			});

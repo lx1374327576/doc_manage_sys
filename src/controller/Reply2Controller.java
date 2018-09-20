@@ -81,7 +81,7 @@ public class Reply2Controller {
 	
 	@FXML
 	protected void add_data_action(MouseEvent event) {
-		if(flag) {
+		if(Parems.isFlagReply()) {
 			return;
 		}
 		Parems.setReply_id(null);
@@ -102,12 +102,12 @@ public class Reply2Controller {
 		model.setUsername(Parems.getUsername());
 		model.setApply_id(Parems.getReply_id());
 		List<Reply> list = new ReplyService().get_info(model);
-		name.setText(list.get(0).getName());
-		room.setText(list.get(0).getDom_number());
-		apply_time.setText(list.get(0).getApply_time());
-		apply_type.setText(list.get(0).getApply_type());
-		message.setText(list.get(0).getInfo());
-		String type =list.get(0).getApply_type();
+		name.setText(list.get(Parems.getRow()).getName());
+		room.setText(list.get(Parems.getRow()).getDom_number());
+		apply_time.setText(list.get(Parems.getRow()).getApply_time());
+		apply_type.setText(list.get(Parems.getRow()).getApply_type());
+		message.setText(list.get(Parems.getRow()).getInfo());
+		String type =list.get(Parems.getRow()).getApply_type();
 		
 		if(type.equals("¿Î–£…Í«Î")) {
 			
@@ -130,9 +130,9 @@ public class Reply2Controller {
 			number_name.setVisible(true);
 			number.setVisible(true);
 			
-			leave_time.setText(list.get(0).getLeave_time());
-			comeback_time.setText(list.get(0).getBack_time());
-			number.setText(list.get(0).getDom_number());
+			leave_time.setText(list.get(Parems.getRow()).getLeave_time());
+			comeback_time.setText(list.get(Parems.getRow()).getBack_time());
+			number.setText(list.get(Parems.getRow()).getDom_number());
 		}else if(type.equals("“ππÈ…Í«Î")) {
 			leave.setVisible(false);
 			leave_time.setVisible(false);
@@ -150,8 +150,8 @@ public class Reply2Controller {
 			number_name.setVisible(true);
 			number.setVisible(true);
 			
-			night_time.setText(list.get(0).getLate_time());
-			number.setText(list.get(0).getDom_number());
+			night_time.setText(list.get(Parems.getRow()).getLate_time());
+			number.setText(list.get(Parems.getRow()).getDom_number());
 		}else if(type.equals("Àﬁ…·≥§…Í«Î")) {
 			leave.setVisible(false);
 			leave_time.setVisible(false);
@@ -168,7 +168,7 @@ public class Reply2Controller {
 			number_name.setVisible(true);
 			number.setVisible(true);
 			
-			number.setText(list.get(0).getDom_number());
+			number.setText(list.get(Parems.getRow()).getDom_number());
 		}else if(type.equals("ÕÀªª…·…Í«Î")) {
 			leave.setVisible(false);
 			leave_time.setVisible(false);
@@ -187,8 +187,8 @@ public class Reply2Controller {
 			new_number.setVisible(true);
 			new_number_name.setVisible(true);
 			
-			number.setText(list.get(0).getDom_number());
-			new_number.setText(list.get(0).getNew_dom_number());
+			number.setText(list.get(Parems.getRow()).getDom_number());
+			new_number.setText(list.get(Parems.getRow()).getNew_dom_number());
 		}else if(type.equals("±®–ﬁ…Í«Î")) {
 			leave.setVisible(false);
 			leave_time.setVisible(false);
@@ -205,12 +205,12 @@ public class Reply2Controller {
 			number_name.setVisible(true);
 			number.setVisible(true);
 			
-			number.setText(list.get(0).getDom_number());
+			number.setText(list.get(Parems.getRow()).getDom_number());
 		}
 		
 		
 		
-		flag = true;
+		Parems.setFlagReply(true);;
 	}
 	
 	

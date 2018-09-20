@@ -1,10 +1,13 @@
 package pop;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -45,3 +48,18 @@ public class PopWindow {
         System.out.println("2");
     }
 }
+
+
+
+//private PasswordField password_text;
+//int x=0;
+//
+//
+//@FXML
+//protected void sign_in_action(ActionEvent event) {
+//	if (x==0){
+//		PopWindow popWindow=new PopWindow();
+//		popWindow.alert_informationDialog("ƒ„»∑»œ¬Î","xxx");
+//		x++;
+//		return ;
+//	}

@@ -95,6 +95,7 @@ public class LostController{
 			room_number.setCellValueFactory(cellData -> cellData.getValue().getRoom_number());
 			connect_number.setCellValueFactory(cellData -> cellData.getValue().getConnect_number());
 			delate.setCellValueFactory(cellData -> cellData.getValue().getDelate());
+			//xxxx.setCellValueFactory(cellData -> cellData.getValue().getDelate());
 			table.setItems(data);
 		}
 		flag = true;

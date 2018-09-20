@@ -20,12 +20,6 @@ import params.Parems;
 
 public class PersonalController {
 	@FXML
-	private Label name;
-	@FXML
-	private Label male;
-	@FXML
-	private Label number;
-	@FXML
 	private TextField mail;
 	@FXML
 	private TextField phone_number;
@@ -59,6 +53,16 @@ public class PersonalController {
 			}else if(result==1) {
 				new PopWindow().alert_informationDialog("提示!","修改成功!");
 				//页面跳转 
+				
+				//页面清空
+				mail.clear();
+				phone_number.clear();
+				building.clear();
+				building_number.clear();
+				old_password.clear();
+				new_password.clear();
+				new_password_sure.clear();
+				
 				
 				KeyValue kValue=new KeyValue(Main.scrollPane.hvalueProperty(), 0.5786,Interpolator.EASE_OUT);
 				Timeline timeline=new Timeline();

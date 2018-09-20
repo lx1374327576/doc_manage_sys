@@ -5,8 +5,17 @@ package params;
 public class Parems {
 	private static String username;
 	private static String question_id;
+	private static String user_grade;
 	
 
+
+	public static String getUser_grade() {
+		return user_grade;
+	}
+
+	public static void setUser_grade(String user_grade) {
+		Parems.user_grade = user_grade;
+	}
 
 	public static String getQuestion_id() {
 		return question_id;

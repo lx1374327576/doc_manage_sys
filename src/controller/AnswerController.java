@@ -1,13 +1,18 @@
 package controller;
 
 
+import java.util.List;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import model.QuestionAndAnswer;
+import service.QuestionAndAnswerService;
+import params.Parems;
+
 
 public class AnswerController {
 	
@@ -26,17 +31,28 @@ public class AnswerController {
 		if(flag) {
 			return;
 		}
+		QuestionAndAnswer model = new QuestionAndAnswer();
+		model.setUsername(Parems.getUsername());
+		model.setIn_question_id(Parems.getQuestion_id());
+		List<QuestionAndAnswer> list = new QuestionAndAnswerService().get_second(model);
+//		questioner_text.setText(list.get(0).getOut_person());
+//		question_text.setText(list.get(0).getOut_question());
 		flag = true;
 	}
 	
 	@FXML
 	protected void back_action(ActionEvent event) {
-		
+		//Ò³ÃæÌø×ª
 	}
 	
 	@FXML
 	protected void reply_action(ActionEvent event) {
-		
+		QuestionAndAnswer model = new QuestionAndAnswer();
+		model.setUsername(Parems.getUsername());
+		model.setIn_question_id(Parems.getQuestion_id());
+		model.setIn_info(my_answer.getText());
+		new QuestionAndAnswerService().submit_reply(model);
+		my_answer.clear();
 	}
 
 	

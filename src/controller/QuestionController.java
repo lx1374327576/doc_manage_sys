@@ -65,9 +65,9 @@ public class QuestionController{
 			table.setItems(data);
 		}
 		List<QuestionAndAnswer> list1 = new QuestionAndAnswerService().get_third(model);
-//		publish_people.setText(list1.get(0).getOut_person());
-//		question_text.setText(list1.get(0).getOut_question());
-//		detail_text.setText(list1.get(0).getOut_info());
+		publish_people.setText(list1.get(0).getOut_person());
+		question_text.setText(list1.get(0).getOut_question());
+		detail_text.setText(list1.get(0).getOut_info());
 		
 		flag = true;
 	}

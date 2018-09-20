@@ -33,7 +33,7 @@ public class ReplyDao extends BaseDao {
 			executeQuery("select name from student where user_name=?",map.get("user_id"));
 			list2=convertList(rs);
 			Map<String,String> map2 = (Map) list2.get(0);
-			tmp.setUsername(map2.get("name"));
+			tmp.setName(map2.get("name"));
 			executeQuery("select exp from apply_type where type=?",map.get("type"));
 			list2=convertList(rs);
 			map2 = (Map) list2.get(0);

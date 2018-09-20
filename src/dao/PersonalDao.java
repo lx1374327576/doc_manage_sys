@@ -34,10 +34,10 @@ public class PersonalDao extends BaseDao {
 		int result=-1;
 		String username=personal.getUsername();
 		if (personal.getEmail()!=null) {
-			executeUpdate("update student set mail=? where user_name=?",personal.getEmail(),username);
+			executeUpdate("update student set email=? where user_name=?",personal.getEmail(),username);
 		}
 		if (personal.getPhone()!=null) {
-			executeUpdate("update student set phone=? where user_name=?",personal.getPhone(),username);
+			executeUpdate("update student set telephone=? where user_name=?",personal.getPhone(),username);
 		}
 		if (personal.getDomitory_building()!=null) {
 			executeUpdate("update student set building_number=? where user_name=?",personal.getDomitory_building(),username);

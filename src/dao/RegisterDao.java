@@ -27,7 +27,7 @@ public class RegisterDao extends BaseDao {
 		id_personinfo=get_count("select * from student");
 		System.out.println("个人信息表有"+id_personinfo+"条！");
 		id_personinfo+=1;
-		result=executeUpdate("insert into student values(?,?,?,?,null,null,null,null,?)",
+		result=executeUpdate("insert into student values(?,?,?,?,null,null,null,null,?,null)",
 				String.valueOf(id_personinfo),register.getNumber(),register.getName(),register.getSex(),register.getUsername());
 		closeAll();
 		return result;

@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:controller="controller.LostController" stylesheets="@main.css" id="lost_stage" fx:id="lost_stage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#add_data_action" prefHeight="442.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane id="lost_stage" fx:id="lost_stage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#add_data_action" prefHeight="442.0" prefWidth="886.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LostController">
    <children>
       <Button layoutX="730.0" layoutY="315.0" mnemonicParsing="false" onAction="#put_action" prefHeight="30.0" prefWidth="100.0" text="挂失">
          <font>
@@ -27,7 +27,7 @@
             <TableColumn fx:id="delate" prefWidth="53.60003662109375" />
         </columns>
       </TableView>
-      <Button layoutX="465.0" layoutY="315.0" mnemonicParsing="false" onAction="#choice_action" prefHeight="30.0" prefWidth="100.0" text="我的失物">
+      <Button fx:id="my_lost_thing" layoutX="465.0" layoutY="315.0" mnemonicParsing="false" onAction="#choice_action" prefHeight="30.0" prefWidth="100.0" text="我的失物">
          <font>
             <Font name="Microsoft YaHei Light" size="18.0" />
          </font></Button>

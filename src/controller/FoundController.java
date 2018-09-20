@@ -27,8 +27,11 @@ import service.LostAndFoundService;
 public class FoundController{
 	
 	private boolean flag = false;
+	private boolean all = false;
 	@FXML
 	private Pane found_stage;
+	@FXML
+	private Button my_found_thing;
 	@FXML
 	private TableColumn<Information, String> lost_people;
 	@FXML
@@ -106,6 +109,54 @@ public class FoundController{
 		LostAndFoundService lostService = new LostAndFoundService();
 		List<LostAndFound> list = lostService.my_show(found);
 		data.clear();
+		if(all) {
+			LostAndFound found1 = new LostAndFound();
+			found1.setUsername(Parems.getUsername());
+			found1.setLandf("1");
+			LostAndFoundService lostService1 = new LostAndFoundService();
+			List<LostAndFound> list1 = lostService1.show(found1);
+			for (int i=0;i<list1.size();i++) {
+				Button btn = new Button();
+				btn.setText("删除");
+				String id = list1.get(i).getLandf_id();
+				int index = i;
+				btn.setOnAction(new EventHandler<ActionEvent>(){
+
+					@Override
+					public void handle(ActionEvent arg0) {
+						// TODO Auto-generated method stub
+						LostAndFound delate = new LostAndFound();
+						delate.setUsername(Parems.getUsername());
+						delate.setLandf_id(id);
+						delate.setIsdelete("1");
+						int result = lostService1.delete(delate);
+						if(result==1) {
+							data.remove(index);
+							new PopWindow().alert_informationDialog("提示", "操作成功");
+						}else if(result==0) {
+							new PopWindow().alert_informationDialog("提示", "操作失败");
+						}else {
+							new PopWindow().alert_informationDialog("错误提示", "未知错误");
+						}
+					}
+					
+				});
+				data.add(new Information(list1.get(i).getName(),list1.get(i).getInfo(),list1.get(i).getNumber(),list1.get(i).getPhone(),btn));
+				lost_people.setCellValueFactory(cellData -> cellData.getValue().getLost_people());
+				lost_thing.setCellValueFactory(cellData -> cellData.getValue().getLost_thing());
+				room_number.setCellValueFactory(cellData -> cellData.getValue().getRoom_number());
+				connect_number.setCellValueFactory(cellData -> cellData.getValue().getConnect_number());
+				delate.setCellValueFactory(cellData -> cellData.getValue().getDelate());
+				table.setItems(data);
+			}
+			all=false;
+			my_found_thing.setText("我的拾物");
+			return;
+		}else {
+			all=true;
+			my_found_thing.setText("所有拾物");
+			
+		}
 		for (int i=0;i<list.size();i++) {
 			Button btn = new Button();
 			btn.setText("删除");

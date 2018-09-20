@@ -108,7 +108,7 @@ public class QuestionAndAnswerDao extends BaseDao {
 		getConnection();
 		List<QuestionAndAnswer> list=new ArrayList();
 		List list1=new ArrayList();
-		executeQuery("select * from qanda where qora=? and username=?","1",questionAndAnswer.getUsername());
+		executeQuery("select * from qanda where id=?",questionAndAnswer.getIn_question_id());
 		list1=convertList(rs);
 		for (int i=0;i<list1.size();i++) {
 			Map<String,String> map = (Map) list1.get(i);

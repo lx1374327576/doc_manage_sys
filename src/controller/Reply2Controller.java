@@ -84,6 +84,7 @@ public class Reply2Controller {
 		if(flag) {
 			return;
 		}
+		Parems.setReply_id(null);
 		message.setEditable(false);
 		leave.setVisible(false);
 		leave_time.setVisible(false);

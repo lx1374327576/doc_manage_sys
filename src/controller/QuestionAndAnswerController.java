@@ -105,6 +105,7 @@ public class QuestionAndAnswerController {
 		QuestionAndAnswer model = new QuestionAndAnswer();
 		model.setUsername(Parems.getUsername());
 		List<QuestionAndAnswer> list = new QuestionAndAnswerService().get_myquestion(model);
+		data.clear();
 		for(int i=0;i<list.size();i++) {
 			Button btn = new Button();
 			btn.setText("ฯ๊ว้");

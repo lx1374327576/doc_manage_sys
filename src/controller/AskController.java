@@ -46,6 +46,8 @@ public class AskController{
 		model.setOut_person(publish_people.getText());
 		new QuestionAndAnswerService().submit_question(model);
 		detail_text.clear();
+		question.clear();
+		publish_people.clear();
 	}
 
 	

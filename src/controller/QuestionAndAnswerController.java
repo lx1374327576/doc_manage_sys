@@ -28,7 +28,7 @@ import service.QuestionAndAnswerService;
 import params.Parems;
 
 public class QuestionAndAnswerController {
-	
+	private boolean all = false;
 	private boolean flag = false;
 	@FXML
 	private Pane question_and_answer_stage;
@@ -106,6 +106,41 @@ public class QuestionAndAnswerController {
 		model.setUsername(Parems.getUsername());
 		List<QuestionAndAnswer> list = new QuestionAndAnswerService().get_myquestion(model);
 		data.clear();
+		if(all) {
+			QuestionAndAnswer model1 = new QuestionAndAnswer();
+			model1.setUsername(Parems.getUsername());
+			List<QuestionAndAnswer> list1 = new QuestionAndAnswerService().get_first(model1);
+			for(int i=0;i<list1.size();i++) {
+				Button btn = new Button();
+				btn.setText("详情");
+				String id = list1.get(i).getOut_question_id();
+				btn.setOnAction(new EventHandler<ActionEvent>(){
+
+					@Override
+					public void handle(ActionEvent arg0) {
+						// TODO Auto-generated method stub
+						KeyValue kValue=new KeyValue(Main.scrollPane.hvalueProperty(), 0.3682,Interpolator.EASE_OUT);
+						Timeline timeline=new Timeline();
+						timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5), kValue));
+						timeline.play();
+						Parems.setQuestion_id(id);
+//						System.out.println(a);
+						//页面跳转
+					}
+					
+				});
+//				btnList.add(a);
+				data.add(new Information(list1.get(i).getOut_person(),list1.get(i).getOut_time(),list1.get(i).getOut_question(),btn));
+				publish_people.setCellValueFactory(cellData -> cellData.getValue().getPublish_people());
+				publish_time.setCellValueFactory(cellData -> cellData.getValue().getPublish_time());
+				question.setCellValueFactory(cellData -> cellData.getValue().getQuestion());
+				edit.setCellValueFactory(cellData -> cellData.getValue().getEdit());
+				table.setItems(data);
+			}
+			all = false;
+		}else {
+			all = true;
+		}
 		for(int i=0;i<list.size();i++) {
 			Button btn = new Button();
 			btn.setText("详情");

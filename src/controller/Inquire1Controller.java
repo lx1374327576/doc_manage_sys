@@ -64,7 +64,7 @@ public class Inquire1Controller {
 		model1.setUsername(Parems.getUsername());
 		List<Inquire> list1 = new InquireService().dom(model1);
 		for(int i=0;i<list1.size();i++) {
-			data1.add(new Information1(list1.get(i).getDom_number(),list1.get(i).getBed_number()));
+			data1.add(new Information1(list1.get(i).getBuilding_number(),list1.get(i).getBed_number()));
 			empty_room.setCellValueFactory(cellData -> cellData.getValue().getEmpty_room());
 			empty_number.setCellValueFactory(cellData -> cellData.getValue().getEmpty_number());
 			table1.setItems(data1);
@@ -74,7 +74,7 @@ public class Inquire1Controller {
 		model2.setUsername(Parems.getUsername());
 		List<Inquire> list2 = new InquireService().roommate(model2);
 		for(int i=0;i<list2.size();i++) {
-			data2.add(new Information2(list2.get(i).getRoommate_name(),list2.get(i).getRoommate_phone()));
+			data2.add(new Information2(list2.get(i).getName(),list2.get(i).getRoommate_phone()));
 			roommate_name.setCellValueFactory(cellData -> cellData.getValue().getRoommate_name());
 			roommate_number.setCellValueFactory(cellData -> cellData.getValue().getRoommate_number());
 			table2.setItems(data2);

@@ -20,7 +20,7 @@ public class InquireDao extends BaseDao{
 		list2=convertList(rs);
 		for (int i=0;i<list2.size();i++) {
 			Map<String,String> map=(Map)list2.get(i);
-			if (map.get("dormitory_number")!=null) {
+			if (map.get("dormitory_number")!=null && !map.get("dormitory_number").equals("")) {
 				dom[Integer.valueOf(map.get("dormitory_number"))]--;
 			}
 		}

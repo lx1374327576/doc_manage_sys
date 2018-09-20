@@ -18,6 +18,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import model.QuestionAndAnswer;
+import service.QuestionAndAnswerService;
+import params.Parems;
 
 public class QuestionAndAnswerController {
 	
@@ -36,7 +39,7 @@ public class QuestionAndAnswerController {
 	private TableView<Information> table;
 	private final ObservableList<Information> data = FXCollections.observableArrayList();
 	
-	List<Button> btnList = new ArrayList<Button>();
+//	List<Button> btnList = new ArrayList<Button>();
 	
 //	for(int i=0;i<2;i++) {
 //		Button a = new Button();
@@ -48,35 +51,69 @@ public class QuestionAndAnswerController {
 		if(flag) {
 			return;
 		}
-		Button a = new Button();
-		a.setText("详情");
-		a.setOnAction(new EventHandler<ActionEvent>(){
+		QuestionAndAnswer model = new QuestionAndAnswer();
+		model.setUsername(Parems.getUsername());
+		List<QuestionAndAnswer> list = new QuestionAndAnswerService().get_first(model);
+		for(int i=0;i<list.size();i++) {
+			Button btn = new Button();
+			btn.setText("详情");
+			String id = list.get(i).getOut_question_id();
+			btn.setOnAction(new EventHandler<ActionEvent>(){
 
-			@Override
-			public void handle(ActionEvent arg0) {
-				// TODO Auto-generated method stub
-				System.out.println("a");
-			}
-			
-		});
-		btnList.add(a);
-		data.add(new Information("a","123","1234",a));
-		publish_people.setCellValueFactory(cellData -> cellData.getValue().getPublish_people());
-		publish_time.setCellValueFactory(cellData -> cellData.getValue().getPublish_time());
-		question.setCellValueFactory(cellData -> cellData.getValue().getQuestion());
-		edit.setCellValueFactory(cellData -> cellData.getValue().getEdit());
-		table.setItems(data);
+				@Override
+				public void handle(ActionEvent arg0) {
+					// TODO Auto-generated method stub
+					Parems.setQuestion_id(id);
+//					System.out.println(a);
+					//页面跳转
+				}
+				
+			});
+//			btnList.add(a);
+			data.add(new Information(list.get(i).getOut_person(),list.get(i).getOut_time(),list.get(i).getOut_question(),btn));
+			publish_people.setCellValueFactory(cellData -> cellData.getValue().getPublish_people());
+			publish_time.setCellValueFactory(cellData -> cellData.getValue().getPublish_time());
+			question.setCellValueFactory(cellData -> cellData.getValue().getQuestion());
+			edit.setCellValueFactory(cellData -> cellData.getValue().getEdit());
+			table.setItems(data);
+		}
+		
+		
 		flag = true;
 	}
 	
 	@FXML
 	protected void ask_action(ActionEvent event) {
-		
+		//页面跳转
 	}
 	
 	@FXML
 	protected void myproblem_action(ActionEvent event) {
-		
+		QuestionAndAnswer model = new QuestionAndAnswer();
+		model.setUsername(Parems.getUsername());
+		List<QuestionAndAnswer> list = new QuestionAndAnswerService().get_myquestion(model);
+		for(int i=0;i<list.size();i++) {
+			Button btn = new Button();
+			btn.setText("详情");
+			String id = list.get(i).getOut_question_id();
+			btn.setOnAction(new EventHandler<ActionEvent>(){
+
+				@Override
+				public void handle(ActionEvent arg0) {
+					// TODO Auto-generated method stub
+					Parems.setQuestion_id(id);
+					//页面跳转
+				}
+				
+			});
+//			btnList.add(a);
+			data.add(new Information(list.get(i).getOut_person(),list.get(i).getOut_time(),list.get(i).getOut_question(),btn));
+			publish_people.setCellValueFactory(cellData -> cellData.getValue().getPublish_people());
+			publish_time.setCellValueFactory(cellData -> cellData.getValue().getPublish_time());
+			question.setCellValueFactory(cellData -> cellData.getValue().getQuestion());
+			edit.setCellValueFactory(cellData -> cellData.getValue().getEdit());
+			table.setItems(data);
+		}
 	}
 
 	

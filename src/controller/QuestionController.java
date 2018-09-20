@@ -1,18 +1,25 @@
 package controller;
 
 
+import java.util.List;
+
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import model.QuestionAndAnswer;
+import service.QuestionAndAnswerService;
+import params.Parems;
 
 public class QuestionController{
 	
@@ -42,10 +49,18 @@ public class QuestionController{
 		if(flag) {
 			return;
 		}
-		data.add(new Information("a","123"));
-		reply_people.setCellValueFactory(cellData -> cellData.getValue().getReply_people());
-		reply_content.setCellValueFactory(cellData -> cellData.getValue().getReply_content());
-		table.setItems(data);
+		QuestionAndAnswer model = new QuestionAndAnswer();
+		model.setUsername(Parems.getUsername());
+		model.setIn_question_id(Parems.getQuestion_id());
+		List<QuestionAndAnswer> list = new QuestionAndAnswerService().get_other_reply(model);
+		for(int i=0;i<list.size();i++) {
+			
+			data.add(new Information("a","123"));
+			reply_people.setCellValueFactory(cellData -> cellData.getValue().getReply_people());
+			reply_content.setCellValueFactory(cellData -> cellData.getValue().getReply_content());
+			table.setItems(data);
+		}
+		
 		flag = true;
 	}
 	

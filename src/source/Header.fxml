@@ -41,7 +41,7 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </MenuButton>
-                  <MenuButton id="question" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="询问" textFill="WHITE">
+                  <MenuButton id="question1" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="询问" textFill="WHITE">
                     <items>
                       <MenuItem mnemonicParsing="false" text="询问" />
                     </items>

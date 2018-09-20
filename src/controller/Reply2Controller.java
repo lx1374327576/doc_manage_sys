@@ -84,6 +84,7 @@ public class Reply2Controller {
 		if(flag) {
 			return;
 		}
+		message.setEditable(false);
 		leave.setVisible(false);
 		leave_time.setVisible(false);
 		comeback.setVisible(false);
@@ -104,6 +105,7 @@ public class Reply2Controller {
 		room.setText(list.get(0).getDom_number());
 		apply_time.setText(list.get(0).getApply_time());
 		apply_type.setText(list.get(0).getApply_type());
+		
 		String type =list.get(0).getApply_type();
 		
 		if(type.equals("¿Î–£")) {

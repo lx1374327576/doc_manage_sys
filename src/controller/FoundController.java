@@ -1,9 +1,9 @@
 package controller;
 
 
-import java.util.ArrayList;
 import java.util.List;
 
+import controller.LostController.Information;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -19,6 +19,10 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import model.LostAndFound;
+import params.Parems;
+import pop.PopWindow;
+import service.LostAndFoundService;
 
 public class FoundController{
 	
@@ -45,45 +49,102 @@ public class FoundController{
 	private TextArea pull_thing;
 	
 	
-	List<Button> btnList = new ArrayList<Button>();
 	
 	@FXML
 	protected void add_data_action(MouseEvent event) {
 		if(flag) {
 			return;
 		}
-		Button a = new Button();
-		a.setText("删除");
-		a.setOnAction(new EventHandler<ActionEvent>(){
+		LostAndFound found = new LostAndFound();
+		found.setUsername(Parems.getUsername());
+		found.setLandf("1");
+		LostAndFoundService lostService = new LostAndFoundService();
+		List<LostAndFound> list = lostService.show(found);
+		for (int i=0;i<list.size();i++) {
+			Button btn = new Button();
+			btn.setText("删除");
+			String id = list.get(i).getLandf_id();
+			btn.setOnAction(new EventHandler<ActionEvent>(){
 
-			@Override
-			public void handle(ActionEvent arg0) {
-				// TODO Auto-generated method stub
-				System.out.println("a");
-				data.remove(0);
-			}
-			
-		});
-		btnList.add(a);
-		data.add(new Information("a","12","123","1234",a));
-		lost_people.setCellValueFactory(cellData -> cellData.getValue().getLost_people());
-		lost_thing.setCellValueFactory(cellData -> cellData.getValue().getLost_thing());
-		room_number.setCellValueFactory(cellData -> cellData.getValue().getRoom_number());
-		connect_number.setCellValueFactory(cellData -> cellData.getValue().getConnect_number());
-		delate.setCellValueFactory(cellData -> cellData.getValue().getDelate());
-		table.setItems(data);
+				@Override
+				public void handle(ActionEvent arg0) {
+					// TODO Auto-generated method stub
+					LostAndFound delate = new LostAndFound();
+					delate.setUsername(Parems.getUsername());
+					delate.setLandf_id(id);
+					delate.setIsdelete("1");
+					int result = lostService.delete(delate);
+					if(result==1) {
+						new PopWindow().alert_informationDialog("提示", "操作成功");
+					}else if(result==0) {
+						new PopWindow().alert_informationDialog("提示", "操作失败");
+					}else {
+						new PopWindow().alert_informationDialog("错误提示", "未知错误");
+					}
+				}
+				
+			});
+			data.add(new Information(list.get(i).getName(),list.get(i).getInfo(),list.get(i).getNumber(),list.get(i).getPhone(),btn));
+			lost_people.setCellValueFactory(cellData -> cellData.getValue().getLost_people());
+			lost_thing.setCellValueFactory(cellData -> cellData.getValue().getLost_thing());
+			room_number.setCellValueFactory(cellData -> cellData.getValue().getRoom_number());
+			connect_number.setCellValueFactory(cellData -> cellData.getValue().getConnect_number());
+			delate.setCellValueFactory(cellData -> cellData.getValue().getDelate());
+			table.setItems(data);
+		}
 		flag = true;
 	}
 
 	
 	@FXML
 	protected void choice_action(ActionEvent event) {
-		
+		LostAndFound found = new LostAndFound();
+		found.setUsername(Parems.getUsername());
+		found.setLandf("1");
+		LostAndFoundService lostService = new LostAndFoundService();
+		List<LostAndFound> list = lostService.my_show(found);
+		for (int i=0;i<list.size();i++) {
+			Button btn = new Button();
+			btn.setText("删除");
+			String id = list.get(i).getLandf_id();
+			btn.setOnAction(new EventHandler<ActionEvent>(){
+
+				@Override
+				public void handle(ActionEvent arg0) {
+					// TODO Auto-generated method stub
+					LostAndFound delate = new LostAndFound();
+					delate.setUsername(Parems.getUsername());
+					delate.setLandf_id(id);
+					delate.setIsdelete("1");
+					int result = lostService.delete(delate);
+					if(result==1) {
+						new PopWindow().alert_informationDialog("提示", "操作成功");
+					}else if(result==0) {
+						new PopWindow().alert_informationDialog("提示", "操作失败");
+					}else {
+						new PopWindow().alert_informationDialog("错误提示", "未知错误");
+					}
+				}
+				
+			});
+			data.add(new Information(list.get(i).getName(),list.get(i).getInfo(),list.get(i).getNumber(),list.get(i).getPhone(),btn));
+			lost_people.setCellValueFactory(cellData -> cellData.getValue().getLost_people());
+			lost_thing.setCellValueFactory(cellData -> cellData.getValue().getLost_thing());
+			room_number.setCellValueFactory(cellData -> cellData.getValue().getRoom_number());
+			connect_number.setCellValueFactory(cellData -> cellData.getValue().getConnect_number());
+			delate.setCellValueFactory(cellData -> cellData.getValue().getDelate());
+			table.setItems(data);
+		}
 	}
 	
 	@FXML
 	protected void pull_action(ActionEvent event) {
-		
+		LostAndFound found = new LostAndFound();
+		found.setUsername(Parems.getUsername());
+		found.setLandf("1");
+		found.setInfo(pull_thing.getText());
+		found.setPhone(pull_number.getText());
+		new LostAndFoundService().submit(found);
 	}
 
 	

@@ -22,6 +22,21 @@ public class BaseDao {
     private PreparedStatement ps;
     protected ResultSet rs;
     
+    public BaseDao(){
+    	try {
+            Class.forName(DRIVER);
+            connection = DriverManager.getConnection(
+                    URL, USERNAME,PWD);
+        } catch (ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        System.out.println("成功连接数据库！");
+    }
+    
     public List convertList(ResultSet rs) {
 		List list = new ArrayList();
 		try {
@@ -40,7 +55,11 @@ public class BaseDao {
 		return list;
 	}
     
-    public void getConnection(){
+    public void getConnection() {
+    	
+    }
+    
+    public void getConnection1(){
         try {
             Class.forName(DRIVER);
             connection = DriverManager.getConnection(
@@ -54,8 +73,13 @@ public class BaseDao {
         }
         System.out.println("成功连接数据库！");
     }
+    
+    public void closeAll() {
+    	
+    }
+    
 
-    public void closeAll(){
+    public void closeAll1(){
         try {
             if (rs != null)
                 rs.close();

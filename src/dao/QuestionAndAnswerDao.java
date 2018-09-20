@@ -160,6 +160,7 @@ public class QuestionAndAnswerDao extends BaseDao {
 		getConnection();
 		int result=get_count("select * from qanda");
 		result+=1;
+		System.out.println(result);
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		System.out.println(df.format(new Date()));
 		executeUpdate("insert into qanda values(?,?,?,?,?,?,?,null)",

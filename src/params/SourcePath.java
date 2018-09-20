@@ -34,7 +34,7 @@ public class SourcePath {
 		
 		
 		allList.add(Login);	
-		allList.add(HomePage);
+		
 		allList.add(Register);
 		allList.add(Apply);
 		allList.add(Reply1);
@@ -51,7 +51,7 @@ public class SourcePath {
 		allList.add(Inquire3);
 		allList.add(Inquire2);
 		allList.add(Guard);
-		
+		allList.add(HomePage);
 		allList.add(Contact);
 		allList.add(Personal);
 		

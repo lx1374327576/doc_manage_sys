@@ -64,7 +64,10 @@ public class AnswerController {
 		new QuestionAndAnswerService().submit_reply(model);
 		
 		my_answer.clear();
-		
+		KeyValue kValue=new KeyValue(Main.scrollPane.hvalueProperty(), 0.316,Interpolator.EASE_OUT);
+		Timeline timeline=new Timeline();
+		timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5), kValue));
+		timeline.play();
 	}
 
 	

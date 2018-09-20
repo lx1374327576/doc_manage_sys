@@ -48,7 +48,13 @@ public class ShowController {
 		Personal result = new PersonalService().show_info(model);
 		System.out.println(result.getIsroommaster());
 		name.setText(result.getName());
-		male.setText(result.getSex());
+		if(result.getSex().equals("0")) {
+			male.setText("Å®");
+		}else if(result.getSex().equals("1")) {
+			male.setText("ÄÐ");
+		}else {
+			male.setText("²»Ïê");
+		}
 		number.setText(result.getNumber());
 		mail.setText(result.getEmail());
 		phone_number.setText(result.getPhone());

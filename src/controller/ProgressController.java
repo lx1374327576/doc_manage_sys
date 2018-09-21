@@ -55,6 +55,8 @@ public class ProgressController{
 			String ispass = "通过";
 			if(list.get(i).getIspass().equals("0")) {
 				ispass="不通过";
+			}else if(list.get(i).getIspass().equals("-1")) {
+				ispass="尚未处理";
 			}
 			data.add(new Information(list.get(i).getApply_time(),list.get(i).getApply_type(),ispass));
 			apply_time.setCellValueFactory(cellData -> cellData.getValue().getApply_time());

@@ -60,7 +60,7 @@ public class RegisterController {
 		if(male.getText().equals("男")) {
 			sex = "1";
 		}else if(male.getText().equals("女")) {
-			sex = "2";
+			sex = "0";
 		}else {
 			new PopWindow().alert_informationDialog("注册错误提示!","请正确填写性别类型!");
 			return;

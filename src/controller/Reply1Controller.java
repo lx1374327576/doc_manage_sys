@@ -119,7 +119,6 @@ public class Reply1Controller {
 			this.name.set(name);
 		}
 		public StringProperty getName() {
-			this.name.set("aa");
 			return name;
 		}
 		

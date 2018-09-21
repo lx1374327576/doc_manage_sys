@@ -10,9 +10,18 @@ public class Parems {
 	private static String student_number;
 	private static boolean flagall = false;
 	private static boolean flagReply = false;
+	private static boolean flagProgress = false;
 	private static int row;
 	
 
+
+	public static boolean isFlagProgress() {
+		return flagProgress;
+	}
+
+	public static void setFlagProgress(boolean flagProgress) {
+		Parems.flagProgress = flagProgress;
+	}
 
 	public static boolean isFlagReply() {
 		return flagReply;

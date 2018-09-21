@@ -65,6 +65,9 @@ public class Inquire3Controller {
 		model1.setUsername(Parems.getUsername());
 		List<Inquire> list1 = new InquireService().in_dom(model1);
 		for(int i=0;i<list1.size();i++) {
+			if(list1.get(i).getIs_in_dom()==null) {
+				continue;
+			}
 			String a = "ÊÇ";
 			if(list1.get(i).getIs_in_dom().equals("0")) {
 				a = "·ñ";

@@ -28,7 +28,6 @@ import service.InquireService;
 
 public class ProgressController{
 	
-	private boolean flag = false;
 	@FXML
 	private Pane progress_stage;
 	@FXML
@@ -45,7 +44,7 @@ public class ProgressController{
 	
 	@FXML
 	protected void add_data_action(MouseEvent event) {
-		if(flag) {
+		if(Parems.isFlagProgress()) {
 			return;
 		}
 		Inquire model = new Inquire();
@@ -64,7 +63,7 @@ public class ProgressController{
 			isagree.setCellValueFactory(cellData -> cellData.getValue().getIsagree());
 			table.setItems(data);
 		}
-		flag = true;
+		Parems.setFlagProgress(true);
 	}
 	
 	@FXML

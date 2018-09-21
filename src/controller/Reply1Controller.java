@@ -77,11 +77,14 @@ public class Reply1Controller {
 					System.out.println("a");
 					Parems.setRow(j);
 					Parems.setReply_id(id);
+					System.out.println(id);
+					System.out.println("aaaaa");
 					Parems.setFlagReply(false);
 				}
 			
 			});
 			data.add(new ReplyInformation(list.get(i).getName(),list.get(i).getDom_number(),list.get(i).getApply_time(),list.get(i).getApply_type(),btn));
+			System.out.println(list.get(i).getName());
 			name.setCellValueFactory(cellData -> cellData.getValue().getName());
 			number.setCellValueFactory(cellData -> cellData.getValue().getNumber());
 			apply_time.setCellValueFactory(cellData -> cellData.getValue().getApply_time());

@@ -54,6 +54,7 @@ public class Reply2Controller {
 		Reply model = new Reply();
 		model.setUsername(Parems.getUsername());
 		model.setApply_id(Parems.getReply_id());
+		System.out.println(Parems.getReply_id());
 		int result = new ReplyService().agree(model);
 		if(result == 0) {
 			new PopWindow().alert_informationDialog("操作提示", "该操作已执行");
@@ -84,7 +85,7 @@ public class Reply2Controller {
 		if(Parems.isFlagReply()) {
 			return;
 		}
-		Parems.setReply_id(null);
+		
 		message.setEditable(false);
 		leave.setVisible(false);
 		leave_time.setVisible(false);

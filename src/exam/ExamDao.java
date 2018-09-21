@@ -30,7 +30,7 @@ public class ExamDao extends BaseDao {
 	
 	public static void main(String []args) {
 		ExamDao examDao=new ExamDao();
-		examDao.test("在这里输入联合查询");
+		examDao.test("select * from student");
 	}
 	
 }

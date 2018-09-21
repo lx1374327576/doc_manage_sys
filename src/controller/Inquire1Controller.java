@@ -102,6 +102,7 @@ public class Inquire1Controller {
 		Timeline timeline=new Timeline();
 		timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(0.5), kValue));
 		timeline.play();
+		Parems.setFlagReply(false);
 	}
 	
 

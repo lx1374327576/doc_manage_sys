@@ -77,6 +77,8 @@ public class Reply1Controller {
 					System.out.println("a");
 					Parems.setRow(j);
 					Parems.setReply_id(id);
+					System.out.println(id);
+					System.out.println("aaaaa");
 					Parems.setFlagReply(false);
 				}
 			

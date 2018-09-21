@@ -82,6 +82,7 @@ public class Reply1Controller {
 			
 			});
 			data.add(new ReplyInformation(list.get(i).getName(),list.get(i).getDom_number(),list.get(i).getApply_time(),list.get(i).getApply_type(),btn));
+			System.out.println(list.get(i).getName());
 			name.setCellValueFactory(cellData -> cellData.getValue().getName());
 			number.setCellValueFactory(cellData -> cellData.getValue().getNumber());
 			apply_time.setCellValueFactory(cellData -> cellData.getValue().getApply_time());
@@ -119,7 +120,6 @@ public class Reply1Controller {
 			this.name.set(name);
 		}
 		public StringProperty getName() {
-			this.name.set("aa");
 			return name;
 		}
 		
